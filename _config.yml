@@ -25,7 +25,7 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Your awesome title
-email: your-email@domain.com
+email: dudgh2328@naver.com
 author: GitHub User
 
 # Copyright setting
@@ -162,8 +162,8 @@ yat:
 # Page default value
 # defaults:
 #   home:
-#     heading: "Your awesome heading"
-#     subheading: "Your awesome subheading"
+#     heading: "Starting Find Mistake"
+#     subheading: "실수에서 찾는 새로운 시"
 #     banner: "Your image url"
 
 # Banner default settings
