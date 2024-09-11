@@ -4,6 +4,7 @@ title: "Bio BigData Analysis(Class1)"
 categories: BioBigData
 author: "YeongHo-Jung"
 meta: "Springfield"
+tags: [빅데이터, 처리와 분석]
 ---
 
 빅데이터란?, 빅데이터 처리와 분석
