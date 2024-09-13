@@ -11,7 +11,7 @@ Git user name과 user email 설정 방법에 대해 알아보자
 
 # Git user name과 user email 설정 방법
 
-### 전체 저장소의 user name과 user email 설정 하기
+### 전체 저장소의 <span style="color:yellowgreen"> User Name </span>과 <span style="color:yellowgreen"> User Email </span>
 
 <span style="color:yellowgreen"> yellowgreen </span>
 
