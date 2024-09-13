@@ -15,8 +15,8 @@ Git user name과 user email 설정 방법에 대해 알아보자
 
 <span style="color:yellowgreen"> yellowgreen </span>
 
-```
-$ git config --global user.name <span style="color:Your Name"> yellowgreen </span>
+```ruby
+$ git config --global user.name "Your Name"
 $ git config --global user.email "Your.email@example.com"
 ```
 
