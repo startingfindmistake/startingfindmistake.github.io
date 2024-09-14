@@ -26,8 +26,8 @@ $ git config --global user.email "Your.email@example.com"
 --global 옵션을 생략하면 해당 저장소(Repository)에서만 적용된다.
 
 
-'''ruby
+~~~ruby
 $ git config user.name "Your Name"
 $ git config user.email "Your.email@example.com"
-'''
+~~~
 
