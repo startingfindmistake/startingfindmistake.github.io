@@ -25,7 +25,8 @@ $ git config --global user.email "Your.email@example.com"
 만약 해당 저장소의 user name과 user email을 변경하고 싶다면 위에서 --global옵션을 생략하면 된다.
 --global 옵션을 생략하면 해당 저장소(Repository)에서만 적용된다.
 
-'''
+
+'''ruby
 $ git config user.name "Your Name"
 $ git config user.email "Your.email@example.com"
 '''
