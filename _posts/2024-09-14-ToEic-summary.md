@@ -54,16 +54,98 @@ RC 빈칸 앞뒤 문장 구조 파악 핵심
 I, You, We, They
 
 #### 인칭대명사표
-| 인칭  | 뜻         | 주격 | 소유격 | 목적격 | 소유대명사 | 재귀대명사 |
-|-------|------------|------|--------|--------|------------|------------|
-| 1인칭 | 나         | I    | my     | me     | mine       | myself     |
-|       | 우리       | we   | our    | us     | ours       | ourselves  |
-| 2인칭 | 너         | you  | your   | you    | yours      | yourself   |
-|       | 너희들     | you  | your   | you    | yours      | yourselves |
-| 3인칭 | 그(남성)   | he   | his    | him    | his        | himself    |
-|       | 그녀(여성) | she  | her    | her    | hers       | herself    |
-|       | 그것(사물) | it   | its    | it     | -          | itself     |
-|       | 그들/그것들| they | their  | them   | theirs     | themselves |
+<hr/>
+
+대명사: 명사를 대신해주는 말  
+I, You, We, They
+
+#### 인칭대명사표
+<table>
+  <tr>
+    <th>인칭</th>
+    <th>뜻</th>
+    <th>주격</th>
+    <th>소유격</th>
+    <th>목적격</th>
+    <th>소유대명사</th>
+    <th>재귀대명사</th>
+  </tr>
+  <tr>
+    <td>1인칭</td>
+    <td>나</td>
+    <td>I</td>
+    <td>my</td>
+    <td>me</td>
+    <td>mine</td>
+    <td>myself</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>우리</td>
+    <td>we</td>
+    <td>our</td>
+    <td>us</td>
+    <td>ours</td>
+    <td>ourselves</td>
+  </tr>
+  <tr>
+    <td>2인칭</td>
+    <td>너</td>
+    <td>you</td>
+    <td>your</td>
+    <td>you</td>
+    <td>yours</td>
+    <td>yourself</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>너희들</td>
+    <td>you</td>
+    <td>your</td>
+    <td>you</td>
+    <td>yours</td>
+    <td>yourselves</td>
+  </tr>
+  <tr>
+    <td>3인칭</td>
+    <td>그(남성)</td>
+    <td>he</td>
+    <td>his</td>
+    <td>him</td>
+    <td>his</td>
+    <td>himself</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>그녀(여성)</td>
+    <td>she</td>
+    <td>her</td>
+    <td>her</td>
+    <td>hers</td>
+    <td>herself</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>그것(사물)</td>
+    <td>it</td>
+    <td>its</td>
+    <td>it</td>
+    <td>-</td>
+    <td>itself</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>그들/그것들</td>
+    <td>they</td>
+    <td>their</td>
+    <td>them</td>
+    <td>theirs</td>
+    <td>themselves</td>
+  </tr>
+</table>
+
+<hr/>
+
 
 
 <hr/>
