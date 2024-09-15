@@ -54,18 +54,17 @@ RC 빈칸 앞뒤 문장 구조 파악 핵심
 I, You, We, They
 
 #### 인칭대명사표
-|| 뜻   | 주격  | 소유격| 목적격| 소유대명사 | 재귀대명사 |
-| ---- | ---- | ---- | ---- | ----- | -----------| --------- |
-|      |      |       |형용사+명사| 혼자 쓰는것| 명사| 주어랑 똑같아야 한다|
-|      |      |~은, ~는| ~의 | ~을 ~에게 | ~의 것| ~자신 |
-|1인칭  | 나  | I | my| me | mine | myself |
-|       |우리 |we | our| us | ours | ourselves|
-|       | 너 | you | your | you | yours | yourself|
-|2인칭  | 너희들| you | your | you | yours | yourselves|
-|       | 그(남성)| he | his | him | his | himself |
-|      |그녀(여성)| she | her | her | hers | herself|
-|3인칭  |그것(사물)| it | its | it | - | itself|
-|      |그들/그것들| they | their | them | theirs | themselves|
+| 인칭  | 뜻         | 주격 | 소유격 | 목적격 | 소유대명사 | 재귀대명사 |
+|-------|------------|------|--------|--------|------------|------------|
+| 1인칭 | 나         | I    | my     | me     | mine       | myself     |
+|       | 우리       | we   | our    | us     | ours       | ourselves  |
+| 2인칭 | 너         | you  | your   | you    | yours      | yourself   |
+|       | 너희들     | you  | your   | you    | yours      | yourselves |
+| 3인칭 | 그(남성)   | he   | his    | him    | his        | himself    |
+|       | 그녀(여성) | she  | her    | her    | hers       | herself    |
+|       | 그것(사물) | it   | its    | it     | -          | itself     |
+|       | 그들/그것들| they | their  | them   | theirs     | themselves |
+
 
 <hr/>
 
