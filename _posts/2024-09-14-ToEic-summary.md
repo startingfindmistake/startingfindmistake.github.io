@@ -71,6 +71,14 @@ I, You, We, They
     <th>재귀대명사</th>
   </tr>
   <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th>형용사</th>
+    <th>혼자 쓰는 것</th>
+    <th>명사</th>
+    <th>주어랑 같을때</th>
+  <tr>
     <td>1인칭</td>
     <td>나</td>
     <td>I</td>
