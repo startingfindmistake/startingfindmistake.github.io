@@ -3,7 +3,7 @@ layout: post
 title: markdown example
 subtitle: quick markdown example
 categories: markdown
-tags: [example]
+tags: [test]
 top: 2
 ---
 
