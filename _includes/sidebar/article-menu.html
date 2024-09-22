@@ -1,8 +1,9 @@
 <style type="text/css" media="screen">
   .post-menu {
-    overflow-y: auto;  /* 세로 스크롤 추가 */
-    border: 1px solid #ccc;  /* 스크롤 가능한 영역 강조 */
-    padding: 10px;
+    overflow-y: auto;  /* 세로 스크롤 가능 */
+    padding: 10px;     /* 내부 여백 */
+    box-sizing: border-box; /* 패딩과 함께 크기를 계산 */
+    height: auto; /* 기본 높이 설정 */
   }
 
   .post-menu ul {
@@ -15,6 +16,7 @@
     font-weight: bold; /* 활성화된 항목 강조 */
   }
 </style>
+
 
 
 
@@ -38,13 +40,13 @@ function debounce(func, wait) {
 
 function adjustMenuHeight() {
   var menu = document.querySelector(".post-menu");
-  var windowHeight = window.innerHeight;  // 현재 창의 높이를 감지
-  var header = document.querySelector('header.site-header');
-  var headerHeight = header ? header.offsetHeight : 0;
+  var windowHeight = window.innerHeight;  // 현재 창의 높이
+  var header = document.querySelector('header.site-header');  // 헤더 높이 감지
+  var headerHeight = header ? header.offsetHeight : 0;  // 헤더가 있을 경우 헤더 높이 계산
 
-  // TOC의 최대 높이를 창 높이의 일정 비율로 설정 (예: 창 높이의 70%)
-  var maxMenuHeight = Math.floor(windowHeight * 0.7 - headerHeight);
-  menu.style.maxHeight = maxMenuHeight + 'px';  // max-height 동적으로 설정
+  // TOC의 높이를 페이지의 나머지 부분에 맞춰서 설정
+  var availableHeight = windowHeight - headerHeight;  // 헤더를 제외한 창의 높이
+  menu.style.height = availableHeight + 'px';  // TOC의 높이를 가득 채우도록 설정
 }
 
 function generateContent() {
@@ -127,5 +129,4 @@ adjustMenuHeight();
 window.addEventListener('resize', adjustMenuHeight);
 
 generateContent();
-
 </script>
