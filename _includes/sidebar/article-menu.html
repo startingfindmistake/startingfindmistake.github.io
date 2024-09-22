@@ -1,6 +1,5 @@
 <style type="text/css" media="screen">
   .post-menu {
-    max-height: 600px; /* 원하는 높이 설정 */
     overflow-y: auto;  /* 세로 스크롤 추가 */
     border: 1px solid #ccc;  /* 스크롤 가능한 영역 강조 */
     padding: 10px;
@@ -16,6 +15,7 @@
     font-weight: bold; /* 활성화된 항목 강조 */
   }
 </style>
+
 
 
 <div class="post-menu">
@@ -34,6 +34,17 @@ function debounce(func, wait) {
       func.apply(context, args);
     }, wait);
   };
+}
+
+function adjustMenuHeight() {
+  var menu = document.querySelector(".post-menu");
+  var windowHeight = window.innerHeight;  // 현재 창의 높이를 감지
+  var header = document.querySelector('header.site-header');
+  var headerHeight = header ? header.offsetHeight : 0;
+
+  // TOC의 최대 높이를 창 높이의 일정 비율로 설정 (예: 창 높이의 70%)
+  var maxMenuHeight = Math.floor(windowHeight * 0.7 - headerHeight);
+  menu.style.maxHeight = maxMenuHeight + 'px';  // max-height 동적으로 설정
 }
 
 function generateContent() {
@@ -87,7 +98,7 @@ function generateContent() {
 
           // TOC 스크롤 시 활성화된 항목이 보이도록 처리
           curActive.scrollIntoView({
-            behavior: 'smooth',  // 부드러운 스크롤 (필요 없으면 제거 가능)
+            behavior: 'smooth',  // 부드러운 스크롤
             block: 'nearest',    // 가장 가까운 위치에 스크롤
           });
         }
@@ -108,6 +119,12 @@ function generateContent() {
     event.preventDefault();
   }, 100));  // 100ms로 debounce 설정
 }
+
+// 페이지 로드 시 메뉴 높이 조절
+adjustMenuHeight();
+
+// 창 크기가 변경될 때마다 메뉴 높이 재조정
+window.addEventListener('resize', adjustMenuHeight);
 
 generateContent();
 
