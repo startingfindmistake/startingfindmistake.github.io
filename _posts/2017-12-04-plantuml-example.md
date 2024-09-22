@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Plantuml example
-categories: example
+categories: test
 tags: [plantuml]
 ---
 
