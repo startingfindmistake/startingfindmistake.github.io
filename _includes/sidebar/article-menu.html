@@ -1,10 +1,22 @@
 <style type="text/css" media="screen">
-.post-menu ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
+  .post-menu {
+    max-height: 300px; /* 원하는 높이 설정 */
+    overflow-y: auto;  /* 세로 스크롤 추가 */
+    border: 1px solid #ccc;  /* 스크롤 가능한 영역 강조 */
+    padding: 10px;
+  }
+
+  .post-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .post-menu li.active a {
+    font-weight: bold; /* 활성화된 항목 강조 */
+  }
 </style>
+
 
 <div class="post-menu">
   <div class="post-menu-title">TOC</div>
@@ -12,7 +24,6 @@
 </div>
 
 <script>
-// Debounce 함수 정의
 function debounce(func, wait) {
   var timeout;
   return function() {
@@ -73,6 +84,12 @@ function generateContent() {
         if (curActive) {
           curActive.classList.add('active');
           activeIndex = i;
+
+          // TOC 스크롤 시 활성화된 항목이 보이도록 처리
+          curActive.scrollIntoView({
+            behavior: 'smooth',  // 부드러운 스크롤 (필요 없으면 제거 가능)
+            block: 'nearest',    // 가장 가까운 위치에 스크롤
+          });
         }
 
         if (lastActive == curActive) {
