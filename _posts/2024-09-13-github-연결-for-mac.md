@@ -8,7 +8,7 @@ meta: "Springfield"
 tags: [github, gitClone]
 ---
 
-![banner]<img src="/assets/images/i_posts/github_clon.jpg" alt="Dinosaur" />
+![banner](/assets/images/i_posts/github_clone.png)
 
 Git user name과 user email 설정 방법에 대해 알아보자
 
