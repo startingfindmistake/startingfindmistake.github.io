@@ -43,9 +43,17 @@
   </div>
   <div class="post-excerpt">
     {%- if post_image and post_image != 'NO_EXCERPT_IMAGE' -%}
-    <a  class="post-image" href="{{ post_url }}" style="flex: 0 1 {{ image_width }}">
-      <div style="background-image: url({{ post_image | relative_url }}); height: {{ image_height }}"></div>
-    </a>
+      {%- if use_html_image -%}
+        <!-- HTML 방식으로 이미지를 넣는 경우 -->
+        <a class="post-image" href="{{ post_url }}">
+          <img src="{{ post_image | relative_url }}" alt="{{ post.title | escape }}" width="{{ image_width }}" height="{{ image_height }}" style="max-width: 100%; height: auto;">
+        </a>
+      {%- else -%}
+        <!-- 마크다운 방식으로 이미지를 넣는 경우 -->
+        <a class="post-image" href="{{ post_url }}" style="flex: 0 1 {{ image_width }}">
+          <div style="background-image: url({{ post_image | relative_url }}); height: {{ image_height }}"></div>
+        </a>
+      {%- endif -%}
     {%- endif -%}
     <a class="post-text" href="{{ post_url }}">
       <p>{{ article_excerpt }} <span class="read_more">Read More</span></p>
