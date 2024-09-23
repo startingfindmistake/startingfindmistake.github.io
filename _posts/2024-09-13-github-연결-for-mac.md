@@ -2,7 +2,7 @@
 layout: post
 title: "github연결 git clone"
 categories: Github setup
-excerpt_image: https://www.google.com/url?sa=i&url=https%3A%2F%2Faia1235.tistory.com%2F77&psig=AOvVaw2AawZW2_jsqoqC1JUjY94j&ust=1727104281476000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqGAoTCOiVif3q1ogDFQAAAAAdAAAAABDQAQ
+excerpt_image: /assets/images/i_posts/github_clone.png
 author: "YeongHo-Jung"
 meta: "Springfield"
 tags: [github, gitClone]
