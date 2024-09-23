@@ -2,13 +2,13 @@
 layout: post
 title: seventen
 subtitle: This is seventens
-excerpt_image: "/assets/images/i_posts/github_clone.jpg"
+excerpt_image: https://github.com/jeffreytse/jekyll-theme-yat/assets/9413601/2ed22d49-90b1-4f7e-8e8f-b77b21dee505
 categories: hit
 tags: [example]
 top: 2
 ---
 
-![banner](/assets/images/i_posts/github_clone.jpg)
+![banner](https://github.com/jeffreytse/jekyll-theme-yat/assets/9413601/2ed22d49-90b1-4f7e-8e8f-b77b21dee505)
 
 Paragraphs are separated by a blank line.
 
