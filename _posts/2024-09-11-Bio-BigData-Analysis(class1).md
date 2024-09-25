@@ -2,6 +2,7 @@
 layout: post
 title: "Bio BigData Analysis(Class1)"
 categories: BioBigData
+excerpt_image: /assets/images/i_posts/bio_big_data.jpg
 author: "YeongHo-Jung"
 meta: "Springfield"
 tags: [빅데이터, 처리와 분석]
