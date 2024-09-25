@@ -7,6 +7,8 @@ meta: "Springfield"
 tags: [빅데이터, 처리와 분석]
 ---
 
+<img src="/assets/images/i_posts/bio_big_data.jpg" alt="Dinosaur" />
+
 빅데이터란?, 빅데이터 처리와 분석
 
 
