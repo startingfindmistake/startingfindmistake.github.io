@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "ToEic 3번째"
+title: "ToEic Review"
 categories: ToEic
 author: "YeongHo-Jung"
 meta: "Springfield"
-tags: [ToEic, English, Grammer, Summary,3번째]
+tags: [3번째]
 use_html_image: true
 excerpt_image: "/assets/images/i_posts/ETS_TOEIC_Logo.png"
 ---
