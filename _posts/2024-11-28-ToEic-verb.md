@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "ToEic 동사의 모든것"
+title: "Toeic verbs"
 categories: ToEic
 author: "YeongHo-Jung"
 meta: "Springfield"
