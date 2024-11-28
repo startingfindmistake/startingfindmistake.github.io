@@ -36,6 +36,7 @@ excerpt_image: "/assets/images/i_posts/ETS_TOEIC_Logo.png"
 3. 수동태는 조동사와 함게 쓰이기도 함
 * should be sent, can be sent 등
 
+---
 
 |   형태    |   구조    |   태  |   의미    |
 |----------|------------|-------|----------|
@@ -44,3 +45,7 @@ excerpt_image: "/assets/images/i_posts/ETS_TOEIC_Logo.png"
 |will have been sent | 미래완료수동태(will ahve been + 과거분사) | 수동태 | 미래 특정 시점까지 **동작이 완료되어진 상태**|
 |will have been sending| 미래완료진행(will have been + V-ing) | 능동태 | 미래 특정 시점까지 지속적으로 진행된 행동|
 
+* ~ing로 끝나면 능동태로 변경된다.
+
+
+[PDF 파일 보기](assets/pdf/toeic_verbs.pdf)
