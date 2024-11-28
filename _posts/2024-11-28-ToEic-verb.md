@@ -42,8 +42,27 @@ excerpt_image: "/assets/images/i_posts/ETS_TOEIC_Logo.png"
 |----------|------------|-------|----------|
 |will send | 미래(will) +  동사원형 | 능동태 | 미래의 단순히 도작이 일어날 것|
 |will have sent | 미래완료 (will have + 과거분사) | 능동태 | 미래 특정 시점까지 **완료된 행동**|
-|will have been sent | 미래완료수동태(will ahve been + 과거분사) | 수동태 | 미래 특정 시점까지 **동작이 완료되어진 상태**|
+|will have been sent | 미래완료수동태(will have been + 과거분사) | 수동태 | 미래 특정 시점까지 **동작이 완료되어진 상태**|
 |will have been sending| 미래완료진행(will have been + V-ing) | 능동태 | 미래 특정 시점까지 지속적으로 진행된 행동|
+|was asking|be동사 + 현재분사(과거진행형)|능동태|   |
+|was being asked|be동사 + 현재분사 +p.p|수동태|   |
+|having asked| having + 분사구문(완료형 분사구문)|능동태|   |
+
+
+
+**능동태**:
+* "Having asked the question, she waited for a response."</br>
+(질문을 한 뒤, 그녀는 대답을 기다렸다.)</br>
+→ "asked"라는 동작을 주어(she)가 능동적으로 수행한 상태입니다.
+
+**수동태**:
+* "Having been asked a question, she gave an answer."</br>
+(질문을 받은 뒤, 그녀는 대답했다.)</br>
+→ "asked"라는 동작을 주어(she)가 당한 상태이므로 수동태입니다.
+
+
+* having asked → 능동태 (주어가 질문한 경우)
+* having been asked → 수동태 (주어가 질문을 받은 경우)
 
 * ~ing로 끝나면 능동태로 변경된다.
 
