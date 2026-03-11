@@ -31,6 +31,10 @@ export default defineConfig({
 					label: 'java',
 					autogenerate: { directory: 'if' },
 				},
+				{
+					label: 'java',
+					autogenerate: { directory: 'java_lang_stringbuilder' },
+				},
 
 
 
