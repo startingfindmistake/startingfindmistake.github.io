@@ -20,7 +20,7 @@ export default defineConfig({
 					],
 				},
 				{
-					label: 'Java',
+					label: 'java',
 					items: [
 						// Each item here is one entry in the navigation menu.
 						{ label: '생성자(Constructor) vs 메서드(Method)', slug: 'constructor_vs_method' },
