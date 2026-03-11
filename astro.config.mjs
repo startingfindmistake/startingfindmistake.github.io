@@ -39,6 +39,10 @@ export default defineConfig({
 					label: 'java',
 					autogenerate: { directory: 'java_util_scanner' },
 				},
+				{
+					label: 'java',
+					autogenerate: { directory: 'loop' },
+				},
 
 
 
