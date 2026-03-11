@@ -17,6 +17,7 @@ export default defineConfig({
 					items: [
 						// Each item here is one entry in the navigation menu.
 						{ label: 'Example Guide', slug: 'guides/example' },
+						{ label: '블로그 테스트', slug: 'hello' },
 					],
 				},
 				{
