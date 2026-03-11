@@ -21,31 +21,18 @@ export default defineConfig({
 				},
 				{
 					label: 'java',
-					autogenerate: { directory: 'java_language' },
-				},
-				{
-					label: 'java',
-					autogenerate: { directory: 'java_lang_integer' },
-				},
-				{
-					label: 'java',
-					autogenerate: { directory: 'if' },
-				},
-				{
-					label: 'java',
-					autogenerate: { directory: 'java_lang_stringbuilder' },
-				},
-				{
-					label: 'java',
-					autogenerate: { directory: 'java_util_scanner' },
-				},
-				{
-					label: 'java',
-					autogenerate: { directory: 'loop' },
-				},
-				{
-					label: 'java',
-					autogenerate: { directory: 'arrangement' },
+					items: [
+						{ label: 'Java 언어 기초', autogenerate: { directory: 'java_language' } },
+						{ label: 'Integer 클래스', autogenerate: { directory: 'java_lang_integer' } },
+						{ label: 'if 조건문', autogenerate: { directory: 'if' } },
+						{
+							label: 'StringBuilder 클래스',
+							autogenerate: { directory: 'java_lang_stringbuilder' },
+						},
+						{ label: 'Scanner 클래스', autogenerate: { directory: 'java_util_scanner' } },
+						{ label: '반복문', autogenerate: { directory: 'loop' } },
+						{ label: '배열', autogenerate: { directory: 'arrangement' } },
+					],
 				},
 
 
