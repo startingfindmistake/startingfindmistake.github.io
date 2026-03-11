@@ -43,6 +43,10 @@ export default defineConfig({
 					label: 'java',
 					autogenerate: { directory: 'loop' },
 				},
+				{
+					label: 'java',
+					autogenerate: { directory: 'arrangement' },
+				},
 
 
 
