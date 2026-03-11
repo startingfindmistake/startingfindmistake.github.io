@@ -21,7 +21,7 @@ export default defineConfig({
 				},
 				{
 					label: 'java',
-					autogenerate: { directory: 'constructor_vs_method' },
+					autogenerate: { directory: 'java_language' },
 				},
 				{
 					label: 'Reference',
