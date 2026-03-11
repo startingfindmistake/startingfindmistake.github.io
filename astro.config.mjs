@@ -20,6 +20,13 @@ export default defineConfig({
 					],
 				},
 				{
+					label: 'Java',
+					items: [
+						// Each item here is one entry in the navigation menu.
+						{ label: '생성자(Constructor) vs 메서드(Method)', slug: 'constructor_vs_method' },
+					],
+				},
+				{
 					label: 'Reference',
 					autogenerate: { directory: 'reference' },
 				},
