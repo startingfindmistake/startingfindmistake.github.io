@@ -35,6 +35,10 @@ export default defineConfig({
 					label: 'java',
 					autogenerate: { directory: 'java_lang_stringbuilder' },
 				},
+				{
+					label: 'java',
+					autogenerate: { directory: 'java_util_scanner' },
+				},
 
 
 
