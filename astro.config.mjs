@@ -24,6 +24,10 @@ export default defineConfig({
 					autogenerate: { directory: 'java_language' },
 				},
 				{
+					label: 'java',
+					autogenerate: { directory: 'java_lang_integer' },
+				},
+				{
 					label: 'Reference',
 					autogenerate: { directory: 'reference' },
 				},
