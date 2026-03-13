@@ -16,7 +16,7 @@ export default defineConfig({
 					label: '메뉴',
 					items: [
 						// Each item here is one entry in the navigation menu.
-						{ label: '블로그 테스트', slug: 'hello' },
+						{ label: '블로그 소개글', slug: 'hello' },
 					],
 				},
 				{
