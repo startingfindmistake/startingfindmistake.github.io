@@ -23,6 +23,10 @@ export default defineConfig({
 					label: 'java',
 					autogenerate: { directory: 'java_language' },
 				},
+				{
+					label: 'GitHub 뉴스 요약본',
+					autogenerate: { directory: 'github_news' },
+				},
 
 
 
