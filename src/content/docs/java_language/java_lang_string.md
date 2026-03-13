@@ -45,10 +45,45 @@ description: java.lang.String에 대해 알아보자
 * 인덱스는 `0`부터 시작합니다.
 * 문자를 찾지 못했ㅇ르 때 예외(Exception)를 발생시키지 않고 `-1`을 반환하므로, 반환값이 `0`이상인지 확인하여 문자의 존재 여부를 판별하는 조건문과 함께 자주 사용됩니다.
 
+**사용예시**
+```java
+public class IndexOfExample {
+    public static void main(String[] args) {
+        String stext = "Hello, Java World!";
+
+        // 1. 문자열 내에 존재하는 단일 문자 검색
+        // 작은따옴표로 감싼 'J'는 char 타입이지만, indexOf(int ch) 메서드를
+        // 호출할 때 자동으로 int 값(유니코드 코드 포인트)로 변환되어 전달됩니다.
+        int indexJ = text.indexOf('J');
+        System.out.println("'J'가 처음 등장하는 인덱스: " + indexJ);
+        // 츌룍: 'J'가 처음 등장하는 인덱스: 7
+
+        // 2. 문자열 내에 존재하지 않는 단일 문자 검색
+        int indexZ = text.indexOf('Z');
+        System.out.println("'z'가 처음 등장하는 인덱스: " + indexZ);
+        // 출력: 'Z'가 처음 등장하는 인덱스: -1
+
+        // 3. int형 유니코드 코드 포인트를 직접 전달하여 검색
+        // 'a'의 10진수 유니코드(아스키) 값은 97입니다.
+        int indexA = text.indexOf(97);
+        System.out.println("코드 포인트 97('a')이 처음 등장하는 인덱스: " + indexA);
+        // 출력: 코드 포인트 97('a')이 처음 등장하는 인덱스: 8
+
+        // 4. 실무에서 활용 (반환값이 -1인지 확인하는 조건문)
+        if (text.indexOf('z') == -1) {
+            System.out.println("안내: 해당 문자열에는 'z'가 포함되어 있지 않습니다.");
+        }
+    }
+}
+```
+* 자바에서 `indexOf`에 문자를 넘길 때 보통 `indexOf('A')`처럼 `char` 형태로 넘기지만, 메서드 시그니처가 `indexOf(int ch)`인 이유는 자바가 `char`값을 `int`로 자동 형변환(Implicit Casting)하여 받아들이기 때문입니다.
+이를 통해 16비트 `char`로 표현할 수 없는 유니코드 보충 문자(이모지 등)의 `int` 코드 포인트 값도 안전하게 처리할 수 있습니다.
+
+
 </br>
 </br>
 
-## indexOf(STring str)
+## `indexOf(String str)`
 **메서드**: `public int indexOf(String str)`
 
 **설명(Descrpiton)**:
@@ -60,3 +95,20 @@ description: java.lang.String에 대해 알아보자
 * `NullPointerException`: 파라미터로 전달된 `str`이 `null`일 경우 예외가 발생합니다.
 * 빈 문자열(`""`)을 인수로 전달하여 검색할 경우, 예외 없이 항상 `0`을 반환합니다.
 * 반환값이 `-1`인지 여부를 통해 특정 문자열일 포함되어 있는지 검사하는 용도(마치 `contains` 메서드처럼) 흔히 활용됩니다.
+
+**활용예시**
+```java
+public class IndexOfStringExample {
+    public static void main(String[] args) {
+        String text = "Hello, Java World! java is fun.";
+
+        // 1. 문자열 내에 존재하는 부분 문자열(substring) 검색
+        //"Java"라는 문자열이 두 번 등장하지만, '처음' 나타나는 위치의 첫 인덱스를 반환합니다.
+        int indexJava = text.indexOf("Java");
+        System.out.println("Java가 처음 시작하는 인덱스" + indexJava);
+        // 인덱스는 0부터 시작하기 때문에 `, (콤마)` 와 `\ (공백)`까지 계산하면
+        // 출력: "Java"가 처음 시작되는 인덱스: 7
+    }
+}
+
+```
