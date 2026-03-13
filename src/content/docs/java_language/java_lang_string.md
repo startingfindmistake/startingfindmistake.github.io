@@ -3,7 +3,8 @@ title: <Java> java.lang.Stirng
 description: java.lang.String에 대해 알아보자
 ---
 
-### `charAt()`메서드
+### `charAt()`
+---
 **클래스**: `java.lang.String`
 **메서드**: `public char charAt(int index)`
 
@@ -20,3 +21,42 @@ description: java.lang.String에 대해 알아보자
 **주의 사항(Throws)**:
 * `IndexOutOfBoundsException`: 전달된 `index`인수가 음수(`0` 미만)이거나 해당 문자열(또는 시퀀스)의 길이 (`length()`)보다 크거나 같을 경우 예외를 발생시킵니다.
 따라서 항상 유효한 인덱스 범위 내에서 호출해야 합니다.
+
+
+</br>
+</br>
+
+## `indexOf(int ch)`
+---
+**클래스**: `java.lang.String`
+**메서드**: `public int indexOf(int ch)`
+
+**설명(Description)**:
+* 이 문자열 내에서 지정된 문자(`ch`)가 처음으로 나타나는 위치의 인덱스를 반환합니다.
+* 파라미터로 전달된 `ch` 값이 이 `String` 객체의 문자 시퀀스에 존재하면, 해당 문자가 처음 나타나는 인덱스(유니코드 코드 유닛 기준)이 반환됩니다.
+* 이 메서드는 보충 문자(Supplementary characters)를 처리할 수 있도록 설계되어, 인수로 `char` 대신 `int` 타입의 유니코드 코드 포인트(Code point)값을 받습니다.
+* 해당 문자가 문자열 내에 존재하지 않으면 `-1`을 반환합니다.
+
+**적용 방법(Application)**:
+* 문자열 내부에서 특정 단일 문자(알파벳, 기호 등)이 가장 처음 등장하는 위치(순서)를 찾고자 할 때 호출합니다.
+반환된 인덱스를 활용하여 문자열을 자르거나(substring)분석할 때 주로 사용합니다.
+
+**주의 사항**
+* 인덱스는 `0`부터 시작합니다.
+* 문자를 찾지 못했ㅇ르 때 예외(Exception)를 발생시키지 않고 `-1`을 반환하므로, 반환값이 `0`이상인지 확인하여 문자의 존재 여부를 판별하는 조건문과 함께 자주 사용됩니다.
+
+</br>
+</br>
+
+## indexOf(STring str)
+**메서드**: `public int indexOf(String str)`
+
+**설명(Descrpiton)**:
+* 이 문자열 내에서 지정된 부분 문자열(substring, `str`)이 처음으로 나타나는 위치의 첫 번째 인덱스를 반환합니다.
+* 공식 문서 기준, 반환된느 인덱스는 `this.startsWith(str, k)`가 참(`true`)가 되는 가장 작은 정수`k` 값입니다.
+* 해당 부분 문자열이 존재하지 않으면 `-1`을 반환합니다.
+
+**주의 사항**
+* `NullPointerException`: 파라미터로 전달된 `str`이 `null`일 경우 예외가 발생합니다.
+* 빈 문자열(`""`)을 인수로 전달하여 검색할 경우, 예외 없이 항상 `0`을 반환합니다.
+* 반환값이 `-1`인지 여부를 통해 특정 문자열일 포함되어 있는지 검사하는 용도(마치 `contains` 메서드처럼) 흔히 활용됩니다.
