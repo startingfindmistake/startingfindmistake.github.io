@@ -10,6 +10,18 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'My Docs',
+
+			head: [
+				{
+					tag: 'meta',
+					attrs: {
+						name: 'google-site-verification',
+						content: '<meta name="google-site-verification" content="tDADCh4tjNdsfpCotMR9twDLQ37pJKsAW4U-hYM8TZ0" />',
+					},
+				},
+			],
+
+
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
 			sidebar: [
 				{
