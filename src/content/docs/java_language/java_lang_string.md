@@ -22,6 +22,60 @@ description: java.lang.String에 대해 알아보자
 * `IndexOutOfBoundsException`: 전달된 `index`인수가 음수(`0` 미만)이거나 해당 문자열(또는 시퀀스)의 길이 (`length()`)보다 크거나 같을 경우 예외를 발생시킵니다.
 따라서 항상 유효한 인덱스 범위 내에서 호출해야 합니다.
 
+**사용예시**
+```java
+public class CharAtExample {
+    public static void main(String[] args) {
+        String text = "Java";
+
+        // 1. 유효한 인덱스에서 단일 문자(char) 추출
+        // 인덱스는 0부터 시작하므로 첫 번째 문자는 인덱스 0에 위치합니다.
+        char firstChar = text.charAt(0);
+        //마지막 문자의 인덱스는 항상 length() -1 입니다.
+        char lastChar = text.charAt(text.length() -1);
+
+        System.out.println("첫 번째 문자 (인덱스 0): " + firstChar); //출력: J
+        System.out.println("마지막 문자 (인덱스 3): " + lastChar); // 출력: a
+
+        // 2. 기본형(primitive type) 반환값을 활용한 조건문 검사
+        // 반환값이 객체가 아닌 char 기본형이므로 '==' 연산자로 즉시 비교가 가능합니다.
+        if (text.charAt(0) == 'J') {
+            System.out.println("안내: 이 문자열은 'J'로 시작합니다.");
+        }
+
+        // 3. 주의 사항: IndexOutOfBoundsException 예외 발생
+        // 3-1. 인덱스가 음수 (0 미만)인 경우
+        try {
+            char negativeIndexChar = text.charAt(-1);
+        } catch (IndexOutOfBoundsException e) {
+            System.out.println("예외 발생: 인덱스는 음수(-1)일 수 없습니다.");
+        }
+
+
+        // 3-2. 인덱스가 문자열의 길이(length())보다 크거나 같은 경우
+        try {
+            //text.length()는 4이므로 인덱스 4는 범위를 벗어납니다. (최대 인덱스는 3)
+            char outOfBoundsChar = text.charAt(4);
+        } catch (IndexOutOfBoundsException e) {
+            System.out.println("예외 발생: 지정한 인덱스가 문자열의 길이를 벗어났습니다.")
+        }
+
+        // 4. 서로게이트(Surrogate) 쌍 처리 확인 (유니코드 보충 문자)
+        // 이모지(음표 🎵등)은 내부적으로 2개의 char(서로게이트 쌍)으로 구성 됩니다.
+        Stirng musicNote = "🎵";
+        System.out.println("\n음표 이모지 문자열의 길이: " + musicNote.length()); // 출력: 2
+
+        // charAt()은 서로게이트 쌍을 분리하지 않고 단일 char로 취급하므로,
+        // 보통 문자의 경우 절반(깨진 문자)만 반환하게 됩니다.
+        char surrogateHalf = musicNote.charAt(0);
+        System.out.println("인데스 0의 char 값(서로게이트 일부 반환): " + surrogateHalf);
+    }
+}
+
+```
+* `text.charAt(text.length() -1)` 패턴은 문자열의 길이에 상관없이 항상 마지막 문자를 안전하게 가져오기 위해 실무에서 매우 자주 쓰이는 관용구 입니다.
+* 서로게이트 쌍(Surrogate pairs)의 경우, `charAt`은 문자의 시각적 의미(이모지 1개)를 고려하지 않고 메모리에 저장된 16비트 `char` 단위로만 접근한다는 점을 코드로 확인할 수 있습니다.
+
 
 </br>
 </br>
@@ -108,7 +162,37 @@ public class IndexOfStringExample {
         System.out.println("Java가 처음 시작하는 인덱스" + indexJava);
         // 인덱스는 0부터 시작하기 때문에 `, (콤마)` 와 `\ (공백)`까지 계산하면
         // 출력: "Java"가 처음 시작되는 인덱스: 7
+
+        
+        // 2. 문자열 내에 존재하지 않는 부분 문자열 검색
+        int indexPython = text.indexOf("Pythob");
+        System.out.println("Python이 처음 시작되는 인덱스: " + indexPython);
+        // 출력 "Python"이 처음 시작되는 인덱스: -1
+
+
+        // 3. 빈 문자열 ("") 검색 (공식 문서 규정)
+        // 빈 문자열을 인수로 전달하면 항상 0을 반환합니다.
+        int indexEmpty = text.indexOf("");
+        System.out.println("빈 문자열 검색 결과 인덱스: " + indexEmpty);
+        // 출력: 빈 문자열("") 검색 결과 인덱스: 0
+
+        // 4. 주의 사항: null 전달 시 NullPointerException 발생
+        try {
+            // 공식 문서에 명시된 대로 파라미터가 null 이면 예외가 발생합니다.
+            int indexNull = text.indexOf(null);
+        } catch (NullPointerException e) {
+            System.out.println("안내: 검색 인수로 null 전달하면 NullPointerException이 발생합니다.")
+        }
+
+        // 5. 실무에서의 활용 (특정 단어 포함 여부 확인)
+        if (text.indexOf("World") != -1) {
+            System.out.println("안내: 해당 텍스트에는 'World'라는 단어가 포함되어 있습니다.");
+        }
     }
 }
 
 ```
+
+* 부분 문자열을 검색할 때는 해당 단어의 첫 글자가 위치한 인덱스를 반환 합니다. (예 `java`의 `j`위치)
+* 찾고자 하는 문자열이 여러 번 등장하더라도 무조건 가장 처음 매칭되는 위치만 반환합니다.
+* `indexOf(String str) != -1` 형태의 조건문은 자바에서 특정 문자열의 포함 여부를 검사할 때 `contains()`메서드와 함께 가장 자주 사용되는 패턴 중 하나입니다.
