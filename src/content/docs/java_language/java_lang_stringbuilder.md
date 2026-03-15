@@ -87,3 +87,42 @@ String C = sb.reverse().toString();
  * **적용방법(Application):**
     * `StringBuilder`를 통해 문자열 조작(추가, 수정, 뒤집기 등)을 모두 마친 후,
     최종 결과를 일반적인 불변(immutable)문자열 타입인 `String`으로 변환하여 저장하거나 다른 메서드의 인자로 넘겨줄 때 호출합니다.
+
+* **주의 사항(Notes)**
+    * **새로운 메모리 할당**
+    호출 시마다 이 객체가 나타내는 문자 시퀀스를 포함하는 **새로운 `String`객체가 메모리에 할당(allocated)** 됩니다. 따라서 반복문 내부 등에서 불필요하게 자주 호출하면 메모리 낭비가 발생할 수 있습니다.
+
+    * **스냅샷(Snapshot)반환:**
+    호출된 시점의 상태를 기반으로 불변(immutable)객체인 `String`을 생성하여 반환합니다.
+    `toString()`을 호출한 이후에 원본 `StringBuilder`의 내용을 변경(append, reverse 등)하더라도, **이미 반환된 `String` 객체의 내용에는 아무런 영향을 미치지 않습니다.**
+
+
+**사용 예시**
+```java
+public class ToStringExample {
+    public static void main(String[] args) {
+        // StringBuilder 객체 생성 및 문자열 조작
+        StringBuilder sb = new StringBuilder("Hello");
+        sb.append(", Java");
+
+        // 1. 최종 완성된 문자 시퀀스를 String으로 변환하여 반환
+        // 이때 메모리에 새로운 String 객체("Hello, Java")가 할당됩니다.
+        String finalString = sb.toString();
+        System.out.println("최초 반환된 String: " + finalString);
+        
+        // 2. 주의 사항 확인: toString() 호출 이후 원본 StringBuilder 객체 수정
+        sb.append("World!");
+
+        // 3. 원본 객체는 수정되었지만, 이미 반환된 String 객체는 영향을 받지 않음 (독립성 보장)
+        System.out.println("\n--- 수정 이후 ---");
+        System.out.println("수정된 StringBuilder 상태: " + sb.toString());
+        // 출력: 수정된 StringBuilder 상태: Hello, Java World!
+
+        System.out.println("기존에 반환된 String 상태: " + finalString);
+        // 출력: 기존에 반환된 String 상태: Hello, Java
+    }
+}
+```
+* `StringBuilder`는 내부에 가변(mutable)배열을 두고 문자열을 조작하지만, 최종적으로 다른 AP(예: `println`의 인자, 다른 메서드의 반환값 등)에 전달할 때는 불변(immutable) 타입인 `String`으로 넘겨야 하는 경우가 많습니다. 이때 `toString()`이 브릿지 역활을 합니다.
+* 위 코드에서 보듯, 한 번 `toString()`으로 추출한 문자열은 원본 `StringBuilder`와 완전히 남남이 되어 각자의 데이터를 유지한다는 것을 꼭 기억해주세요.
+
