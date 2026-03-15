@@ -9,7 +9,7 @@ export default defineConfig({
 
 	integrations: [
 		starlight({
-			title: 'My Docs',
+			title: 'Starting Find Mistake',
 
 			head: [
 				{
