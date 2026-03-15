@@ -39,6 +39,10 @@ export default defineConfig({
 					label: 'GitHub 뉴스 요약본',
 					autogenerate: { directory: 'github_news' },
 				},
+				{
+					label: 'conversation with english',
+					autogenerate: { directory: 'conversation_en'},
+				},
 
 
 
