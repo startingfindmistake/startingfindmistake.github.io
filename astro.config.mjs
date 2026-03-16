@@ -22,7 +22,7 @@ export default defineConfig({
 			],
 
 
-			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
+			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/startingfindmistake' }],
 			sidebar: [
 				{
 					label: '메뉴',
