@@ -43,6 +43,10 @@ export default defineConfig({
 					label: 'conversation with english',
 					autogenerate: { directory: 'conversation_en'},
 				},
+				{
+					label: 'SpringBoot',
+					autogenerate: { directory: 'springboot'},
+				},
 
 
 
