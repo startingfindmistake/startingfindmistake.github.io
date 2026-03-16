@@ -19,6 +19,14 @@ export default defineConfig({
 						content: 'tDADCh4tjNdsfpCotMR9twDLQ37pJKsAW4U-hYM8TZ0',
 					},
 				},
+				{
+					tag: 'script',
+					attrs: {
+						async: true, //비동기 로드
+						src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6449334868265557',
+						crossorigin: 'anonymous',
+					},
+				}
 			],
 
 
@@ -41,19 +49,19 @@ export default defineConfig({
 				},
 				{
 					label: 'conversation with english',
-					autogenerate: { directory: 'conversation_en'},
+					autogenerate: { directory: 'conversation_en' },
 				},
 				{
 					label: 'SpringBoot',
-					autogenerate: { directory: 'springboot'},
+					autogenerate: { directory: 'springboot' },
 				},
 				{
 					label: 'baekjoon_java',
-					autogenerate: { directory: 'baekjoon_java'},
+					autogenerate: { directory: 'baekjoon_java' },
 				},
 				{
 					label: 'machine learning',
-					autogenerate: { directory: 'machine_learning'},
+					autogenerate: { directory: 'machine_learning' },
 				},
 
 
