@@ -51,6 +51,10 @@ export default defineConfig({
 					label: 'baekjoon_java',
 					autogenerate: { directory: 'baekjoon_java'},
 				},
+				{
+					label: 'machine learning',
+					autogenerate: { directory: 'machine_learning'},
+				},
 
 
 
