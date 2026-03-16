@@ -145,6 +145,10 @@ public class IndexOfExample {
 * 공식 문서 기준, 반환된느 인덱스는 `this.startsWith(str, k)`가 참(`true`)가 되는 가장 작은 정수`k` 값입니다.
 * 해당 부분 문자열이 존재하지 않으면 `-1`을 반환합니다.
 
+**`indexOf()`메서드의 실제 위치(Java API 문서)**
+* `Java.lang.String`클래스: 문자열 내부에서 특정 문자(`char`의 정수형인 `int`)나 부분 문자열 인덱스를 찾기 위한 `indexOf(int ch)` 및 `indexOf(String str)`메서드를 제공합니다.
+* `java.util.List`인터페이스: 리스트 컬렉션 내부에서 특정 객체의 위치를 찾기 위한 `indexOf(Object o)` 메서드를 제공합니다.
+
 **주의 사항**
 * `NullPointerException`: 파라미터로 전달된 `str`이 `null`일 경우 예외가 발생합니다.
 * 빈 문자열(`""`)을 인수로 전달하여 검색할 경우, 예외 없이 항상 `0`을 반환합니다.

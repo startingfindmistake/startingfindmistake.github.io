@@ -10,8 +10,8 @@ description: java배열 에 대해 알아보자
 >3. 배열 초기화
 >4. 주요 문법 규칙 및 특징
 >5. 다차원배열
->7. 예외 처리
->8. 배열 상세 알아보기
+>6. 예외 처리
+>7. 배열 상세 알아보기
 
 
 Java에서 배열은 **같은 타입**의 데이터를 **고정된 크기**로 저장하는 **객체(Container Obejcet)**입니다.
@@ -108,14 +108,14 @@ int x = myNumbers[1][2]; // 7 (두 번째 배열의 세 번째 요소)
 
 
 ```java
-int[] arr = new int[5]; // 인ㄷ게스는 0~4
+int[] arr = new int[5]; // 인덱스는 0~4
 //System.out.println(arr[5]); //에러 발생 (5번 인덱스는 없음) 이때 ArrayIndexOutOfBoundsException에러가 발생함
 ```
 
 
 
 
-
+## 8. 배열은 메서드가 없고 필드를 사용해야 한다.
 
 
 
