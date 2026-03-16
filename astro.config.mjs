@@ -47,6 +47,10 @@ export default defineConfig({
 					label: 'SpringBoot',
 					autogenerate: { directory: 'springboot'},
 				},
+				{
+					label: 'baekjoon_java',
+					autogenerate: { directory: 'baekjoon_java'},
+				},
 
 
 
