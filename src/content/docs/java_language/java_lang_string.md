@@ -200,3 +200,74 @@ public class IndexOfStringExample {
 * 부분 문자열을 검색할 때는 해당 단어의 첫 글자가 위치한 인덱스를 반환 합니다. (예 `java`의 `j`위치)
 * 찾고자 하는 문자열이 여러 번 등장하더라도 무조건 가장 처음 매칭되는 위치만 반환합니다.
 * `indexOf(String str) != -1` 형태의 조건문은 자바에서 특정 문자열의 포함 여부를 검사할 때 `contains()`메서드와 함께 가장 자주 사용되는 패턴 중 하나입니다.
+
+
+</br>
+</br>
+
+
+## `replace()`메서드
+---
+**클래스:** `java.lang.String`
+
+**메서드 1:** `public String replace(char oldChar , char newChar)`
+**메서드 2:** `public String replace(CharSequence target, CharSequence replacement)`
+
+**설명 (Description)**
+* `replace(char oldChar , char newChar)`: 이 문자열에서 발견되는 모든 `oldChar`를 `newChar`로 치환한 결과 문자열을 반환합니다.
+만약 이 `String` 객체의 문자 시퀀스에 `oldChar`가 단 하나도 존재하지 않는다면, 새로운 객체를 생성하지 않고 ** 이 `String` 객체 자신에 대한 참조를 그대로 반환** 합니다.
+
+* `replace(Char Sequence target, CharSequence replacement)`: 지정된 리터럴 대상 시퀀스(`target`)와 일치하는 이 문자열의 각 부분 문자열을 지정된 리터럴 대체 시퀀스(`replcement`)로 치환합니다.
+치환 작업은 **문자열의 첨으부터 끝을 향해(from the beginning to the end)진행** 됩니다.
+공식 문서에 따르면, 문자열 `"aaa"`에서 `"aa"`를 `"b"`로 치환하면 뒤쪽을 먼저 치환한 `"ab"`가 아니라, 앞에서부터 치환이 이루어져 `"ba"`가 됩니다.
+
+
+**적용 방법(Application)**
+* 정규표현식(Regular Expression)이 아닌, 문자열 내의 특정 단일 문자나 단순한 부분 문자열(단어 등) 값 자체를 모두 찾아 다른 문자로 일괄 변경하고자 할 때 호출합니다.
+반환된 새로운 문자열을 변수에 담아 사용해야 합니다.
+
+**주의 사항(Throws & Notes)**
+* `NullPointerException`: `replace(CharSequence target, CharSequence replacement)`를 사용할 때, `target`이나 `replacement` 인수로 `null`을 전달하면 예외가 발생합니다.
+* **불변성(Immutability)**: `String`은 불변 객체이므로 원본 문자열 자체는 절대 수정되지 않습니다.
+`replace()`의 결과는 항상 반환값으로 받아야 합니다.
+
+**`replace()`사용 예시 코드**
+```java
+public class ReplaceExample {
+    public static void main(String[] args) {
+        String original = "Hello, Java World!";
+
+        // 1. 단일 문자(char) 치환
+        // 모든 'o' 문자를 '0'(숫자 영)으로 변경하여 새로운 문자열 반환
+        String replacedChar = original.replace('o', '0');
+        System.out.println("문자 치환 결과: " + replacedChar);
+        // 출력: Hell0, Java W0rld!
+
+        // 2. 문자 치환 시 변경 대상이 없는 경우 (공식 문서 명세)
+        // 'z'는 원본에 없으므로, 새로운 객체를 만들지 않고 original 객체의 참조를 그대로 반환합니다.
+        String noChange = original.replace('z', 'x');
+        System.out.println("변경 대상이 없을 때 참조 동일 여부: " + (original == noChange));
+        // 출력: true (같은 메모리 주소를 가리킴)
+
+        // 3. 부분 문자열(CharSequence) 치환
+        String replacedString = original.replace("Java", "Spring");
+        System.out.println("문자열 치환 결과: " + replacedString);
+        // 출력: Hello, Spring World!
+
+        // 4. 주의 사항: 치환 방향 (처음부터 끝으로 진행)
+        // 공식 문서에서 제공하는 대표적인 동작 예시입니다.
+        String aaa = "aaa";
+        String ba = aaa.replace("aa", "b");
+        System.out.println("\"aaa\"에서 \"aa\"를 \"b\"로 치환한 결과: " + ba);
+        // 출력: ba (앞의 "aa"가 먼저 "b"로 바뀌고, 뒤에 남은 "a"가 붙음)
+
+        // 5. 주의 사항: NullPointerException 발생
+        try {
+            String nullTest = original.replace("Java", null);
+        } catch (NullPointerException e) {
+            System.out.println("\n예외 발생: target이나 replacement에 null을 넣을 수 없습니다.");
+        }
+    }
+}
+
+```
