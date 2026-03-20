@@ -22,7 +22,7 @@ description: Crush 80 키보드 단축키 메뉴얼에 대해 알아보자
 ## 아이콘 LED
 
 ---
-![Crush 80 아이콘 이미지](https://github.com/startingfindmistake/startingfindmistake.github.io/assets/thrifty/crush80_icon.png)
+![Crush 80 아이콘 이미지](../../../assets/thrifty_posts/crush80/crush80_logo.png)
 **아이콘 조명 효과 바꾸기:** `Fn`+`[`
 **아이콘 조명 색상 바꾸기:** `Fn`+`]`
 **아이콘 조명 끄고/켜기:** `Fn` + `p`
