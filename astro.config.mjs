@@ -66,6 +66,13 @@ export default defineConfig({
 
 
 
+				{
+					label: '알뜰살뜰',
+					autogenerate: { directory: 'thrifty'},
+				},
+
+
+
 
 				{
 					label: 'Reference',
