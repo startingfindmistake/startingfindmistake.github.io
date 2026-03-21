@@ -64,7 +64,7 @@ export default defineConfig({
 					autogenerate: { directory: 'machine_learning' },
 				},
 				{
-					label: 'Markdown',
+					label: 'Markdowns',
 					autogenerate: { directory: 'markdown' },
 				},
 
