@@ -15,14 +15,14 @@ export default defineConfig({
 				{
 					tag: 'meta',
 					attrs: {
-						name: 'google-site-verification-us',
+						name: 'google-site-verification',
 						content: 'tDADCh4tjNdsfpCotMR9twDLQ37pJKsAW4U-hYM8TZ0',
 					},
 				},
 				{
 					tag: 'meta',
 					attrs: {
-						name: 'google-site-verification-kr',
+						name: 'google-site-verification',
 						content: '3EkjzPipCcEdMUzElwwDATaN0LOThltrddfxudrKViM',
 					},
 				},
