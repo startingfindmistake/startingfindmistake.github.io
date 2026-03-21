@@ -63,12 +63,16 @@ export default defineConfig({
 					label: 'machine learning',
 					autogenerate: { directory: 'machine_learning' },
 				},
+				{
+					label: 'Markdown',
+					autogenerate: { directory: 'markdown' },
+				},
 
 
 
 				{
 					label: '알뜰살뜰',
-					autogenerate: { directory: 'thrifty'},
+					autogenerate: { directory: 'thrifty' },
 				},
 
 
