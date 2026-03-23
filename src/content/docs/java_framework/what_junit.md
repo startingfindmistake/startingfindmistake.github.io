@@ -5,11 +5,12 @@ description: junit에 대해서 알아보자
 
 >**JUnit**은 자바(Java) 생태계에서 가장 널리 사용되는 **단위 테스트(Unit Testing)프레임워크**입니다.
 
-이 포스팅은 10분정도 투자하시면 Junit에 대해서 간단하게 알아볼수 있습니다.
+이 포스팅은 15분⏱️정도 투자하시면 Junit에 대해서 간단하게 알아볼수 있습니다.
 
 >1. JUnit은 왜 나왔을까?
 >2. Junit의 현재
 >3. Junit 핵심 개념
+>4. 처음 Junit을 사용하려고 할때
 
 
 ## 1.JUnit은 왜 나왔을까?
@@ -81,3 +82,106 @@ JUnit의 가장 기본적인 단위는 테스트 메서드 입니다.
 동일한 로직을 여러 가지 다른 데이터로 테스트하고 싶을 때 사용합니다.
 * `@ParameterizedTest`:하나의 테스트 메서드에 여러 개의 파라미터 셋(`@ValueSource`, `@CsvSource`등)을 주입하여, 데이터만 바꿔가며 수차례 테스트를 자동 실행합니다.
 공식 문서에서 강력하게 추천하는 기능 중 하나 입니다.
+
+<br />
+<br />
+
+## 처음 JUnit을 사용하려고 할때
+---
+import로 `junit`을 불러 오려고 한다면, 예를들어 `"The import org.junit cannot be resolved"`에러가 날 것이다.
+
+### 🔍 오류의 근본 원인
+Java 컴파일러는 코드 상단에 `import org.junit.jupiter.api...`를 만나면, 해당 패키지와 클래스가 프로젝트 내부나 연결된 외부 라이브러리(JAR 파일)에 존재하는지 찾습니다.
+라이브러리를 찾지 못하면 "해당 경로를 해석(resolve)할 수 없다"며 컴파일 에러를 발생시킵니다.
+
+JUnit 5 공식 문서에 다르면, JUnit 5는 단일 라이브러리가 아니라 여러 모듈의 조합으로 이루어져 있습니다.
+* 코드를 작성하고 컴파일할 때는 `junit-jupiter-api`모듈이 필요합니다. (`@Test`, `@DisplayName`등이 여기에 포함됩니다.)
+* 코드를 실행할 때는 `junit-jupiter-engine`모듈이 필요합니다.
+
+>즉, 지금은 프로젝트 설정 파일(Maven, Gradle 등)에 이 `junit-jupiter-api` 의존성(Dependency)이 명시되어 있지 않거나, 선언했음에도 아직 다운로드되지 않아 컴파일러가 라이브러리를 찾지 못하고 있는 상태입니다.
+
+### 🛠️ 해결 방법
+이 에러를 해결하기 위해서는 사용하는 환경에 맞게 JUnit 5 라이브러리를 추가해 주면 됩니다.
+
+* **Gradle 빌드 도구를 사용하는 경우(`build.gradle`)**. 
+`dependencies`블록 안에 아래 코드가 있는지 확인하고 없으면 추가해 주세요.(추가 후 반드시 build gradle를 꼭 Reload 해서 변경 사항을 동기화해야 합니다)
+
+```gradle
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.10.0'
+}
+```
+
+<br />
+<br />
+
+* **Maven 빌드 도구를 사용하는 경우 (`pom.xml`)**. 
+`<dependencies>` 태그 안에 아래 코드를 추가하고 Maven 설정을 다시 reload 해주세요.  
+```xml
+<dependency>
+    <groupId>org.junit.jupiter</groupId>
+    <artifactId>junit-jupiter-api</artifactId>
+    <version>5.10.0</version>
+    <scope>test</scope>
+</dependency>
+```
+
+<br />
+<br />
+
+* **빌드 도구 없이 순수 IDE(IntelliJ, Eclipse)만 사용하는 경우**
+에러가 난 코드 (예)`@Test`)위에 마우스를 올리거나 클릭한 뒤, IDE가 제공하는 자동 수정 기능 (IntelliJ: `Alt + Enter`, Eclipse: `Ctrl + 1`)을 사용해 **"Add JUnit 5 to classpath"** 옵션을 선택하시면 IDE가 알아서 라이브러리를 추가해 줍니다.
+
+<br />
+<br />
+
+* **VS Code 등 터미널에서 순수하게 `javac`와 `java`명령어로 직접 컴파일 할 경우**
+
+VS Code의 "Extension Pack for Java"확장자를 설치한다, 즉 내 프로젝트 폴더 안에 Junit을 설치한다고 보면 된다.
+
+
+1. 설치하기 위해서
+JUnit 5의 다운로드 위치를 알아야 합니다.
+Junit 5공식 문서의 Console Launcher 섹션을 보면은
+_"An executable `junit-platform-console-standalone-<version>.jar` with all dependencies included is published in the **Maven Central repository...**"_
+(tranlate: 모든 의존성이 포함된 실행 가능한 `junit-platform-console-standalone-<버전>.jar`파일은 **Maven Central 저장소**에 배포되어 있습니다.)
+
+즉, 공식 문서에서는 **Maven Central**이라는 전 세계 표준 라이브러리 저장소에서 해당 파일을 다운로드하라고 안내합니다.
+
+2. Maven Central 저장소의 URL 구조
+자바 생태계에서 공식적으로 라이브러리르 배포하는 메인 서버 주소가 바로 `https://repo1.maven.org/maven2/` 입니다.
+이곳의 파일 경로(URL)는 항상 정해진 규칙을 따릅니다.
+* Group ID(그룹명): `org.junit.platform` ➡️ `org/junit/platform/`
+* Artifact ID(프로젝트 명): `junit-platform-console-standalone`➡️ `junit-platform-console-standalone/`
+* version(버전): `1.10.2` ➡️ `1.10.2/`
+* 파일명: `junit-platform-console-standalone-1.10.2.jar`
+
+<br />
+<br />
+
+* curl 사용시
+```bash
+curl -O https://repo1.maven.org/maven2/org/junit/platform/junit-platform-console-standalone/1.10.2/junit-platform-console-standalone-1.10.2.jar
+```
+
+* **wget 사용 시**
+```bash
+wget https://repo1.maven.org/maven2/org/junit/platform/junit-platform-console-standalone/1.10.2/junit-platform-console-standalone-1.10.2.jar
+```
+
+* **Windows (PowerShell)**
+```powershell
+Invoke-WebRequest -Uri "https://repo1.maven.org/maven2/org/junit/platform/junit-platform-console-standalone/1.10.2/junit-platform-console-standalone-1.10.2.jar" -OutFile "junit-platform-console-standalone-1.10.2.jar"
+```
+
+
+
+
+2. 프로젝트 폴더 안에 `lib`이라는 이름의 새 폴더를 만듭니다.
+
+3. 다운로드한 `junit-platform-console-standalone-1.10.2.jar`파일을 `lib` 폴더에 안에 넣습니다.
+
+4. VS Code 하단 탐색기(Explorer) 탭의 Java Projects 섹션에서 Referenced Libraries 옆의 `+` 버튼을 눌러 이 JAR 파일을 추가해 줍니다.
+
+그러면 코드의 에러가 사라지는 것을 확인할수 있습니다.
