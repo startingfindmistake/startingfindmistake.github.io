@@ -51,6 +51,10 @@ export default defineConfig({
 					autogenerate: { directory: 'java_language' },
 				},
 				{
+					label: 'java_framework',
+					autogenerate: { directory: 'java_framework' },
+				},
+				{
 					label: 'GitHub 뉴스 정리',
 					autogenerate: { directory: 'github_news' },
 				},
