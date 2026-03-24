@@ -136,7 +136,7 @@ dependencies {
 <br />
 <br />
 
-* **VS Code 등 터미널에서 순수하게 `javac`와 `java`명령어로 직접 컴파일 할 경우**
+* **VS Code 등 터미널에서 명령어로 직접 컴파일 할 경우**
 
 VS Code의 "Extension Pack for Java"확장자를 설치한다, 즉 내 프로젝트 폴더 안에 Junit을 설치한다고 보면 된다.
 
@@ -182,6 +182,14 @@ Invoke-WebRequest -Uri "https://repo1.maven.org/maven2/org/junit/platform/junit-
 
 3. 다운로드한 `junit-platform-console-standalone-1.10.2.jar`파일을 `lib` 폴더에 안에 넣습니다.
 
-4. VS Code 하단 탐색기(Explorer) 탭의 Java Projects 섹션에서 Referenced Libraries 옆의 `+` 버튼을 눌러 이 JAR 파일을 추가해 줍니다.
+4. 컴파일 명령어를 작성합니다.
+```bash
+javac -cp ".:lib/junit-platform-console-standalone-1.10.2.jar" <파일명>.java
+```
 
-그러면 코드의 에러가 사라지는 것을 확인할수 있습니다.
+5. 실행 명령어를 작성합니다.
+```bash
+java -jar lib/junit-platform-console-standalone-1.10.2.jar -cp . -c <파일명>
+```
+
+그러면 JUnit 확장자 코드가 잘 실행되는것을 확인할수 있습니다.
