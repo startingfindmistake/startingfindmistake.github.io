@@ -1,5 +1,5 @@
 ---
-title: <데이터베이스>배탁적 관계(Mutually Exclusive Relationship)
+title: <데이터베이스>배타적 관계(Mutually Exclusive Relationship)
 description: 데이터베이스 에서 배타적 관계에 대해서 알아보자
 ---
 
