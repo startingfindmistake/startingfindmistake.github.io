@@ -78,6 +78,10 @@ export default defineConfig({
 					label: 'Markdown',
 					autogenerate: { directory: 'markdowns' },
 				},
+				{
+					label: 'Database',
+					autogenerate: { directory: 'database_inform'},
+				},
 
 
 
