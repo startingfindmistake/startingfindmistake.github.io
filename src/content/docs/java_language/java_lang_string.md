@@ -271,3 +271,70 @@ public class ReplaceExample {
 }
 
 ```
+
+<br />
+<br />
+
+
+## `equals()` 메서드
+---
+
+**클래스**: `java.lang.String`
+**메서드**: `pulic boolean equals(Object anObject)`
+
+**설명(Description)**
+이 문자열(String)을 지정된 객체(Object)와 비교합니다.
+결과는 인자로 전돨된 객체가 `null`이 아니고,
+이 객체와 **동일한 문자 시퀀스(sequence of character)**를 나타내는 `String` 객체일 경우메난 `true`를 반환합니다.
+
+
+**적용 방법(Application):**
+두 문자열의 내용(실제 문자열 데이터)이 정확히 일치하는지 검사할 때 사용합니다. 객체의 메모리 주소를 비교하는 `==`연산자와 달리, 실제 문자열 값 자체의 동등성(equivalence)을 평가해야 하는 모든 경우에 호출합니다.
+
+**주의 사항(Notes)**
+* **Null 체크 내장:** 전달된 인자(`anObject`)가 `null`인 경우, 예외(Exception)를 발생시키지 않고 단순히 `false`를 반환합니다.
+* **엄격한 타입(Type)확인:** 비교 대상 객체가 `String` 타입이 아닌 경우(예: `StringBuilder`, `StringBuffer` 등) 내용이 같아 보이더라도 무조건 `false`를 반환합니다.
+* **대소문자 구분:** 이 메서드는 문자의 대소문자를 엄격하게 구분합니다. 만약 대소문자를 무시하고 비교하고 싶다면 공식 문서에 명시된 대체 메서드인 `equalsIgnoreCase(String)`을 사용해야 합니다.
+
+**사용 예시**
+```java
+public class EqualsExample {
+    public static void main(String[] args) {
+        String str1 = new String("Hello");
+        String str2 = new String("Hello");
+        String str3 = "hello";
+
+
+        // 1. 문자 시퀀스(값) 비교
+        // str1과 str2는 메모리에 할당된 서로 다른 객체지만,
+        // 포함하고 있는 문자 시퀀스가 완전히 동일하므로 true 반환합니다.
+        boolean isEqual = str1.equals(str2);
+        System.out.println("str1.equals(str2: " + isEqual);
+        // 출력: str1.equals(str2): true
+
+        // 2. 동등성(euqsls)과 동일성(==)의 차이 비교
+        // equals()는 공식 문서의 설명대로 '문자 시퀀스'를 비교하지만,
+        // == 연산자는 객체의 참조(메모리 주소)를 비교하므로 false를 반환합니다.
+        System.out.println("str1 == str2: " + (str1 == str2));
+        // 출력: str1 == str2: false
+
+        // 3. 주의 사항 확인: 대소문자 구분 및 다른 타입/Null 비교
+        // 문자열이 같아도 대소문자가 다르면 false 반환
+        System.out.println("\n--- 주의 사항 확인---");
+        System.out.println("대소문자 다름: " + str1.equals(str3));
+
+        // 인자가 null인 경우 예외 없이 false 반환
+        System.out.println("null 비교: " + str1.equlas(null));
+        // 출력: null 비교: false
+
+        // 인자가 String 객체가 아닌 경우(StringBuilder) false 반환
+        StringBuilder sb = new StringBuilder("Hello");
+        System.out.println("다른 타입 비교: " + str1.equals(sb));
+        // 출력: 다른 타입 비교: false
+    }
+}
+```
+
+* `String` 클래스의 `equals()` 메서드는 최상위 클래스인 `Object`의 메서들르 오버라이딩(재정의)하여, 단순히 객체가 같은지르 넘어서 **"객체가 품고 있는 문자 시퀀스의 내용이 같은지"**를 논리적으로 판단하도록 설계되었습니다.
+
+* 자바에서 문자열의 내용이 일치하는지 확인할 때는 참조(주소)를 비교하는 `==` 연산자가 아닌, 반드시 `equals()` 메서드를 사용해야 공식 문서에서 보장하는 올바른 문자 시퀀스 비교 결과를 얻을수 있습니다.
