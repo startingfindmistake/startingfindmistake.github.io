@@ -338,3 +338,73 @@ public class EqualsExample {
 * `String` 클래스의 `equals()` 메서드는 최상위 클래스인 `Object`의 메서들르 오버라이딩(재정의)하여, 단순히 객체가 같은지르 넘어서 **"객체가 품고 있는 문자 시퀀스의 내용이 같은지"**를 논리적으로 판단하도록 설계되었습니다.
 
 * 자바에서 문자열의 내용이 일치하는지 확인할 때는 참조(주소)를 비교하는 `==` 연산자가 아닌, 반드시 `equals()` 메서드를 사용해야 공식 문서에서 보장하는 올바른 문자 시퀀스 비교 결과를 얻을수 있습니다.
+
+<br />
+<br />
+
+## `split()` 메서드
+---
+**클래스:** `java.lang.String`
+**메서드:** `public String[] split(String regex)`
+
+**설명(Description)**
+주어진 정규 표현식(regular expression)과 일치하는 부분을 기준으로 이 문자열(String)을 분리하여 문자열 배열(`String[]`)로 반환합니다.
+이 메서드는 지정된 정규 표현식과 제한(limit)인자 값을 `0`으로 설정하여 두 개의 인자를 받는 `split(String regex, int limit)` 메서드를 호출한 것과 정확히 동일하게 작동합니다. 그 결과로 분할 된 배열의 **마지막에 남는 후행 빈 문자열(trailing empty strings)은 결과 배열에 포함되지 않고 버려집니다.**
+
+**적용 방법(Application)**
+사용자가 질문한 공백(`" "`)이나 쉽표(`,`), 탭(`\t`)등 특정 패턴이나 구분자를 기준으로 하나의 긴 문자열을 여러 개의 토큰(부분 문자열)으로 쪼개어 배열 형태로 다루고자 할 때 사용합니다.
+데이터를 파싱(parsing)하거나 무장을 단어 단위로 분리할 때 주로 호출합니다.
+
+**주의 사항(Notes)**
+* **정규 표현식 기반:** 전달되는 인자(`regex`)는 단순한 문자열이 아니라 **정규 표현식**으로 해석됩니다. 사용자가 제시한 공백(`" "`)은 정규식에서도 단순 공백으로 처리되어 문제가 없지만, 마침표(`.`)나 파이프(`|`), 별표(`*`)와 같은 정규식 특수 기호를 구분자로 쓸 때는 반드시 이스케애프 처리(예: `"\\."`)를 해야 합니다.
+
+* **후행 빈 문자열 제거 제한(limit=0):** 단일 인자 `split(regex)`은 내부적으로 한계값을 `0`으로 사용하므로, 문자열 중간에 발생하는 빈 문자열은 배열에 포함되지만, 맨 끝(꼬리 부분)에 발생하는 빈 문자열들은 모두 제거됩니다.
+
+* **일치하는 항목이 없을 경우:** 주어진 정규 표현식과 일치하는 부분이 문자열 내에 하나도 없다면, 원본 문자열 전체를 유일한 원소로 가지는 길이가 `1`인 배열을 반환합니다.
+
+* **예외(Exception)발생**: 인자로 전달된 정규 표현식의 문법이 잘못되었을 경우 `java.util.regex.PatternSyntaxException`을 발생시킵니다.
+
+
+**사용예시**
+```java
+import java.util.Arrays;
+
+public class SplitExample {
+    public static void main(String[] args){
+        // 1. 공백(" ")을 기준으로 문자열 분리 
+        String sentence = "Java String split method";
+        String[] words = sentence.split(" ");
+        
+        System.out.println("--- 1. 공백 분리 ---");
+        System.out.println("결과: " + Arrays.toString(words));
+        // 출력: 결과: [Java, String, split, method]
+
+        // 2. 후행 빈 문자열 제거 동작 확인 (limit = 0의 특성)
+        String data = "apple,banana,,"; // 끝에 쉼표가 연속으로 있음
+        String[] fruits = data.split(",");  // 쉼표를 기준으로 분리
+
+        System.out.println("\n--- 2. 후행 빈 무자열 제거 ---");
+        // 중간에 빈 문자열은 포함되지만, 마지막에 남는 빈 문자열들은 배열에서 버려짐
+        System.out.println("결과: " + Arrays.toString(fruits));
+        System.out.println("배열 길이: " + fruits.length);
+        // 출력: 결과: [apple, banana]
+        // 출력: 배열 길이: 2
+
+
+        // 3. 주의 사항: 정규식 특수 문자 사용 시 (. 마침표)
+        String ipAddress = "192.168.0.1";
+
+        // 마침표(.)는 정규식에서 '모든 문자'를 의미하므로, 이스케이프(\\) 없이 사용하면 제대로 분리되지 않음
+        String[] wrongSplit = ipAddress.split(".");
+        // 올바른 방법: 정규식 특수문자 마침표를 이스케이프 처리
+        String[] correctSplit = ipAddress.split("\\.");
+
+        System.out.println("\n --- 3. 정규식 특수 문자 주의 ---");
+        System.out.println("잘못된 사용(.): " + Arrays.toString(wrongSplit)); // 빈 배열 출력
+        System.out.println("올바른 사용(\\.): " + Arrays.toString(correctSplit));
+        // 출력: 올바른 사용(\.): [192, 168, 0, 1]
+    }
+}
+```
+
+`String.split(" ")`은 자바 공식 문서에 따라 단순히 "문자를 자른다"는 개념을 넘어, **"정규 표현식(regex)엔진을 사용하여 패턴이 일치하는 곳을 기준으로 문자열을 쪼개고, 꼬리에 남는 빈 공간을 정리하여 배열로 반환하는 메서드"** 로 정의되어 있습니다. 따라서 인자가 단순 문자가 아닌 정규 표현식으로 작동한다는 점을 인지하고 사용하는 것이 가장 중요합니다.
