@@ -169,7 +169,7 @@ $$P(\text{dimension} = i) = \frac{l_i}{\sum_j l_j}$$
 
 
 
-![](https://velog.velcdn.com/images/dudgh2328/post/17f3e3d1-52f3-44fe-9f3c-bbe50d326b13/image.png)
+![rcf dataflow흐름사진](../../../assets/machine_learning_posts/randomcutforest_post/rcfdataflow.png)
 
 위 그림은 점 하나(point)가 아니라 흐름의 모양(shape)을 기억하기 위해 데이터를 조각내어(Shingling) 효율적으로 저장(Sampling)하는 과정입니다.
 
