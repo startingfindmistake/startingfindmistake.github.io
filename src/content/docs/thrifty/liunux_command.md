@@ -1,6 +1,6 @@
 ---
-title: Crush 80 키보드 단축키 메뉴얼
-description: Crush 80 키보드 단축키 메뉴얼에 대해 알아보자
+title: linux 간단 명령어
+description: linux 간당 명령어 모음집
 ---
 
 ## 리눅스 명령어
