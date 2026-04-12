@@ -1,5 +1,5 @@
 ---
-title: linux 간단 명령어
+title: 내가 보려고 만든 linux 간단 명령어
 description: linux 간당 명령어 모음집
 ---
 
