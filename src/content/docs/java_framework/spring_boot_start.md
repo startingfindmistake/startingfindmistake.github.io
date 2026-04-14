@@ -134,6 +134,6 @@ public class DemoApplication {
 ---
 1. 웹 브라우저를 켭니다.
 2. 주소창에 `http://localhost:8080/hello`를 입력하고 접속합니다.
-* 화면에 **Hello World!**가 출력되는 것을 확인할 수 있습니다.
+* 화면에 **Hello World!** 가 출력되는 것을 확인할 수 있습니다.
 3. 파라미터를 넘겨보고 싶다면, 주소창에 `http://localhost:8080/hello?name=Spring`이라고 입력해 보세요
 * 화면이 **Hello Spring!** 으로 바뀌는 것을 확인할수 있습니다.

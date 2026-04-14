@@ -26,3 +26,7 @@ description: 영어 단어를 알아보자
 * looking forward = 기대하다
 
 * I'm a bit nervous = 조금 긴장되지만
+
+* to organize = 정리
+
+* How long will it take? =  몇분 걸릴까요?
