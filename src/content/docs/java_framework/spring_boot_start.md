@@ -32,7 +32,7 @@ Spring Boot 공식 문서에서는 프로젝트 초기 설정을 위해 [spring 
 1. 웹 브라우저를 열고 [start.spring.io](https://start.spring.io/)에 접속합니다.
 
 2. 화면에 다음과 같이 프로젝트 설정을 선택합니다.
-
+![스프링부트 시작화면](../../../assets/java_framework_posts/spring_boot_start_post/spring_boot_start1.png)
 * **Project**: `Gradle - Groovy` (또는 Maven, 최근에는 Gradle을 많이 선호합니다.)
 * **Language**: `java`
 * **Spring Boot**: 미리 선택된 기본값 (보통 3.x.x 안정화 버번)을 그대로 둡니다. (SNAPSHOP이나 M, RC가 붙지 않은 버전을 선택하세요)
