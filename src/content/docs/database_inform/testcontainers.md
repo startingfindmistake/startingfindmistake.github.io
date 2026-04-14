@@ -94,9 +94,27 @@ testImplementation 'org.testcontainers:postgresql:1.19.3'
 ```
 <br />
 
+의존성을 추가했으면 build를 다시 Reload해야 겠죠?
+아래 명령어를 사용하여 의존성을 다시 다운로드 합니다.
+**명령어**
+```bash
+./gradlew --refresh-dependencies
+```
+Terminal 창에 작성하면 reload가 됩니다.!
+
+<br />
+
 #### 3step: 테스크 코드 작성
 가장 기본적인 통합 테스트 구조입니다.
+
+![테스트코드 작성 폴더 위치](../../../assets/database_inform_posts/testcontainers_post/testcontainers1.png)
+
+빨간 네모 위치 `DemoApplicationTEsts.java`를 확인해 보면
+![테스트코드 작성 폴더 위치](../../../assets/database_inform_posts/testcontainers_post/testcontainers2.png)
+이렇게 기본 세팅 코드가 적혀 있는것을 지우고 밑에 있는 코드를 작성해 봅니다.
 ```java
+
+package com.example.demo; // 1. 메인 클래스와 똑같은 패키지명 작성 (필수)
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.DynamicPropertyRegistry;
@@ -134,4 +152,105 @@ class MyRepositoryIntegrationTest {
 }
 ```
 
-* 
+* `@Testconatiners` & `@Container`: 
+테스트가 시작할 때 컨테이너를 켜고, 끝날 때 꺼주는 어노테이션 입니다.(`static`으로 선언하면 클래스의 모든 테스트가 하나의 컨테이너를 공유하고, 인스턴스 변수로 선언하면 테스트 메서드마다 새 컨테이너를 띄웁니다.)
+
+* `@DynamicPropertySource`:
+Testcontainers가 동적으로 할당된 랜덤 포트(JDBC URL)를 Spring의 설정 값(`applicaion.yml`에 있는 값 대신)으로 덮어씌워 줍니다
+
+작성을 했는데 빨간줄과 함께 오류가 생길수 있습니다.
+
+위에 import부분에서 오류가 시작된다면
+라이브러리는 적혀있는데 에디터가 인식을 못 하는 경우(동기화 문제)일 가능성이 높습니다.
+
+컴퓨터 입장에서 바라본다면
+파일만 수정해 두고 에디터에 "변경된 사항을 반영해서 다운로드해 줘!"라고 알려주지 않았잖아 라고 생각하면 됩니다.
+
+**VS Code Java 설정 초기화**
+1. `Ctrl + Shift + P` (Mac은 `Cmd + Shift + P`)를 눌러 명령어 팔레트를 엽니다.
+2. `java: clean java language server workspace`를 타이핑하고 선택합니다.
+3. `Reload and delete` 버튼을 누른다. (문구의 내용은 해석해 보길 바란다.!)
+![testcontainer알림 문구 이미지](../../../assets/database_inform_posts/testcontainers_post/testcontainers3.png)
+
+그러면 에러가 사라지는 것을 확인할수 있다.
+
+
+그리고 나서 잘 작동하는지 확인하기 위해
+**명령어**
+```bash
+./gradle.test
+```
+작성을 했더니 결과값을 확인하려고 하니
+![testcontainer알림 문구 이미지](../../../assets/database_inform_posts/testcontainers_post/testcontainers4.png)
+
+build successful를 보면 854ms 즉 1초도 안돼서 성공했다고 나왔다.
+
+성공하면 된거 아니야?!
+
+여기서 잘 생각해보면 `testcontainers`는 `docker`기반인데 `docker`를 띄우기 위해서는 아무리 좋은 컴퓨터라도 2초 정도는 걸린다.
+내 컴퓨터는 더 걸리지만...
+
+즉 저 결과는 `testcontainers`가 실행도 되지 않았다는것!!!
+
+
+혹시나 해서 `docker`가 켜져 있지 않은지 확인하기 위해서
+**명령어**
+```bash
+docker ps
+```
+로 확인을 해보니 잘 켜져있는것을 확인할수 있다.
+
+그러면 문제는
+Gradle의 `Incremental Build(증분 빌드)` 때문이다.
+![증분 빌드 이미지](../../../assets/database_inform_posts/testcontainers_post/testcontainers5.png)
+
+여기서 보면 `4 up-to-date`라고 되어 있는 것을 확인할수 있다.
+
+## 수정 필요
+
+
+
+<br />
+<br />
+
+
+그러면 이것을 해결하기 위해서 이전에 성공했던 기록을 지우고 다시 테스트 하는 것입니다.
+
+```bash
+./gradlew clean test
+```
+만약에 제대로 실행 되었는지 로그를(INFO 레벨까지) 보고 싶다면 `--info`옵션을 붙여 주면 된다.
+
+```bash
+./gradlew clean test --info
+```
+
+
+## 그러면 이제 다시 test를 돌려보자
+```bash
+./gradlew test   
+```
+
+### 로그 분석
+1. **Ryuk(관리자)실행**
+* `INFO tc.testcontainers/ryuk:0.14.0 -- Creating container...`
+* 테스트가 끝나면 컨테이너들을 청소해 줄 '청소부' 컨테이너가 가장 먼저 뜬것을 확인할수 있습니다다.
+
+2. **PostgreSQL 컨테이너 실행**
+* `INFO tc.postgres:15-alpine -- Creating container...`
+* 설정한 대로 가벼운 Alpine 리눅스 기반의 Postgres 15버전이 실행되어 있는것을 확인할수 있습니다.
+
+3. **랜덤 포트 할당 완료**
+* `Container is started (JDBC URL: jdbc:postgresql://localhost:52274/testdb...)`
+* 원래 Postgres는 5432를 쓰지만, Testcontainers가 충돌을 피해 52274라는 랜덤 포트를 열어주었습니다.
+
+4. **Spring Boot와의 연결**
+* `Starting MyRepositoryIntegrationTest using Java 17...`
+
+* 스프링 부트가 뜨면서 방금 만들어진 52274 포트의 DB에 성공적으로 접속했습니다.
+
+5. **테스트 코드 실행 결과**
+* `컨테이너 DB URL: jdbc:postgresql://localhost:52274/testdb?loggerLevel=OFF`
+* 작성하신 `System.out.println`이 실행되면서 실제 접속 정보를 콘솔에 찍어주었습니다.
+
+이렇게 testconatiners를 직접 간단하게 잘 돌아가는 확인해볼수 있었습니다.
