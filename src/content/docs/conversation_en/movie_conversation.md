@@ -6,7 +6,7 @@ description: 영화를 주제로 영어로 대화해 보자
 what genre of movies do you like the most?
 Please also tell me if there is a particular reason why you like it.
 
-genre = 장르
+* genre = 장르
 
 
 I like comedy and action genres.
@@ -30,3 +30,18 @@ I also like action movies because they make the impossible possible, giving me m
 
 
 또한 액션 영화는 불가능한것을 가능하게 만들어 저한테 동기부여 및 에너지를 얻을수 있어서 좋아합니다.
+
+
+<br />
+<br />
+
+Who is your favorite actor?
+Which movie starring that actor left the deepest impression on you?
+
+
+* starring = 주연
+* deepest impression = 감명 깊은
+* left deepest impression = 가장 깊은 인상을 남겼다.
+* on you = 너한테
+
+가장 좋아하는 배우는 누구인가요? 그 배우가 출연한 영화 중에 어떤 영화를 가장 감명 깊게 보셨나요?
