@@ -68,4 +68,8 @@ The Impossible movie series stimulates my dopamine by making the impossible poss
 가장 좋아하는 배우는 톰크루즈입니다. 톰크루즈 배우는 나이가 많은데도 불구하고 아직도 현역으로 열심히 작품에서 직접 뛰어다니시는 것을 보고 좋아하면서도 존경합니다. 
 그리고 톰크루즈 하면 바로 미션임파서블을 빼먹을수 없죠.
 임파서블 영화 시리즈는 불가능을 가능으로 만드는 것이 저의 도파민을 자극합니다.
+
 ---
+
+
+
