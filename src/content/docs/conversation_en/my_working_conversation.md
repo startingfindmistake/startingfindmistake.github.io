@@ -28,3 +28,21 @@ I used Amazon OpenSearch to efficiently process and index this vast amount of se
 
 - 나는 이러한 방대한 양의 센서 로그를 효율적으로 처리하고 색인화하기 위해 Amazon OpenSearch를 사용 했습니다.
 
+Instead of overloading standard infrastructure, I managed anomaly alerts by designing an event-driven, serverless pipeline using OpenSearch Triggers, AWS SNS, AWS Lambda, and MariaDB.
+
+* 표준 인프라에 과부하를 주는 대신, OpenSearch 트리거, AWS SNS, AWS Lambda 및 MariaDB를 사용하여 이벤트 기반의 서버리스 파이프라인을 설계함으로써 이상 징후 알림을 관리했습니다.
+
+Ensuring Data Synchronization and Search Optimization
+
+* 데이터 동기화 및 검색 최적화 보장
+
+
+Systematic Data Cleaning and Quality Control
+
+* 체계적인 데이터 정제 및 품질 관리
+
+
+During the LG Aimers project, he was responsible for processing large manufacturing sensor datasets to detect product abnormalities.
+
+* LG 에이머스 프로젝트 기간 동안 그는 대규모 제조 센서 데이터 세트를 처리하여 제품 이상을 감지하는 업무를 담당했습니다.
+
