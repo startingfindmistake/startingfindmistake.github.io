@@ -30,3 +30,4 @@ description: 영어 단어를 알아보자
 * to organize = 정리
 
 * How long will it take? =  몇분 걸릴까요?
+
