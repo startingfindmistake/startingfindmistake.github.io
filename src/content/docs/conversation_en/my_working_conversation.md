@@ -22,17 +22,29 @@ Building Real-Time Data Pipelines and Serverless Architectures
 
 successfully collected and visualized real-time IoT sensor data, such as RPM, noise, and vibration, originating from factory equipment.
 
+* originating = 발생하다(기원하다)
+
 - 공장 설비에서 발생하는 RPM, 소음, 진동 등의 IoT 센서 데이터를 실시간으로 수집하고 시각화하는 데 성공했다
 
 I used Amazon OpenSearch to efficiently process and index this vast amount of sensor logs.
+* vast = 대단한
+* vast amount 엄청난 양
 
 - 나는 이러한 방대한 양의 센서 로그를 효율적으로 처리하고 색인화하기 위해 Amazon OpenSearch를 사용 했습니다.
 
 Instead of overloading standard infrastructure, I managed anomaly alerts by designing an event-driven, serverless pipeline using OpenSearch Triggers, AWS SNS, AWS Lambda, and MariaDB.
 
+* Overloading = 과부화
+* event-driven = 이벤트 기반
+
 * 표준 인프라에 과부하를 주는 대신, OpenSearch 트리거, AWS SNS, AWS Lambda 및 MariaDB를 사용하여 이벤트 기반의 서버리스 파이프라인을 설계함으로써 이상 징후 알림을 관리했습니다.
 
 Ensuring Data Synchronization and Search Optimization
+
+* ensuring = 보장하는
+* synchronization = 동기화
+* Optimization = 최적화
+
 
 * 데이터 동기화 및 검색 최적화 보장
 
