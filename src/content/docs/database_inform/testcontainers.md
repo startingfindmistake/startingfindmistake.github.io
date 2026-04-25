@@ -10,6 +10,7 @@ description: Testconatiners에 대해 간단하게 살펴보자
 >2. Testcontainers란 무엇인가?
 >3. Testcontainers의 동작 원리(Life Cycle)
 >4. 처음 사용자를 위한 단계별 가이드 (Java/Spring Boot Example)
+> 5. 🔄 Testcontainers + GitHub Actions 실행 단계
 
 ## 1. Testconatiners를 배우기 전 필요한 사전 지식
 ---
@@ -294,3 +295,38 @@ CI 서버에 Docker를 설치하고 띄우려면 무겁고 돈이 많이 들지 
 * 가장 피해야할 안티 패턴입니다.
 개발자 A가 테스트를 돌리면서 데이터를 넣고 있는데, 동시에 CI 서버가 테스트를 돌리면서 데이털르 지워버리면 원인 모를 테스트 실패가 발생합니다.(Flaky Tests).
 Testcontainers는 실행 시마다 무작위 포트(Random Port)를 할당받는 격리된 환경을 제공하므로, 병렬로 테스트를 돌려도 절대 충돌이 나지 않습니다.
+
+
+<br />
+<br />
+
+## 🔄 Testcontainers + GitHub Actions 실행 단계
+---
+코드를 push 하거나 pull request를 올려서 GitHub Actions가 작동할 때, 내부적으로는 다음과 같은 순서로 진행됩니다.
+
+1. **이벤트 발생 및 새 가상 머신(Runner)할당**
+    * 사용자가 코드를 push하면, GitHub Actions는 완전히 깨끗한 상태의 새로운 가상 머신(`Ubuntu Linux`등)을 하나 할당합니다.
+    * 이 머신 안에는 이미 Docker 데몬이 켜져 대기하고 있습니다.
+
+<br />
+
+2. **코드 체크아웃 및 언어 환경 세팅**
+* 할당된 러너가 리포지토리의 최신 코드를 내려받습니다.(`actions/checkout`).
+* Java(Spring), Node.js, Python 등 프로젝트에 맞는 개발 환경을 세팅합니다.(`actions/setup-java` 등)
+
+3. **테스트 명령어 실행(여기서 Testcontainers가 개입합니다.)**
+* 워크플로우에서 `gradle test`나 `npm test` 같은 테스트 실행 명령어가 작동합니다.
+* 테스트 코드 내부에서 **Testcontainers**코드를 만나는 순간, 다음 작업들이 **자동으로**일어 납니다.
+    1. **컨테이너 풀(Pull)**: Testcontainers가 필요한 데이터베이스(예: PostgreSQL, Redis 등)의 Docker 이미지를 GitHub 러너의 로컬 환경으로 다운로드 합니다.
+    2. **컨테이너 실행(Run)**: 다운로드한 이미지를 바탕으로 임시 컨테이너를 띄웁니다.
+    3. **동적 포트 할당**: 컨테이너가 띄워지면, 충돌을 막기 위해 무작위(Random)포트를 애플리케이션과 연결해 줍니다.
+
+    <br />
+
+4. **통합 테스트 진행**
+    * 애플리케이션 코드는 방금 Testcontainers가 띄워준 데이터베이스(Docker 컨테이너)를 바라보고 테스트를 수행합니다.
+    * Mook(가짜) 객체가 아닌 실제 DB를 사용하므로 매우 높은 신뢰성의 테스트가 진행됩니다.
+
+5. **자동 종료 및 자원 정리**
+    * Testcontainers 공식문서에 따르면, 컨테이너를 띄울 때 'Ryuk'이라는 이름의 자원 관리(Resource Reaper) 컨테이너를 하나 더 몰래 띄웁니다.
+    * 테스트가 성공하든 실패하든 완전히 종료되면, 이 Ryuk 컨테이너가 
