@@ -31,3 +31,10 @@ description: 영어 단어를 알아보자
 
 * How long will it take? =  몇분 걸릴까요?
 
+* conduce = 이끌다.
+
+* It might be easiest to understand = 쉽게 이해하기 위해서는
+
+* assign tasks = 작업 할당
+
+* observe = 관찰하다.
