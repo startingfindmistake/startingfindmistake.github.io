@@ -38,3 +38,9 @@ description: 영어 단어를 알아보자
 * assign tasks = 작업 할당
 
 * observe = 관찰하다.
+
+* really taught = 뼈져리게 느끼다.
+
+* I'd be lying if I said it was easy = 쉽다고 말하면 거짓말일거야.
+
+* get used to ~ = ~에 익숙해지다.
