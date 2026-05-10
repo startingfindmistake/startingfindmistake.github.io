@@ -44,3 +44,16 @@ description: 영어 단어를 알아보자
 * I'd be lying if I said it was easy = 쉽다고 말하면 거짓말일거야.
 
 * get used to ~ = ~에 익숙해지다.
+
+* Professional but colde = 전문적이지만 차가운
+* A perfectionist = 완벽주의자
+* Too demanding =  요구가 너무 많은
+* least one = 적어도 하나
+* boss at work = 직장 상사
+* It exists = 존재한다.
+* About one person = 한명쯤
+* I think it can't be helped = 어쩔수 없다고 생각해.
+* intense = 극심한, 강렬한
+* character = 성격
+* just throws = 그냥 던져버려
+* treated Andy = 엔디를 대하다.

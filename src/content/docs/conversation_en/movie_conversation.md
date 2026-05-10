@@ -321,3 +321,18 @@ The Hunter Killer's container is a mystery about finding the whereabouts of a vi
 
 > "If you are into action thrillers, this is an absolute masterpiece of its genre."
 > (만약 액션 스릴러에 빠져있다면, 이건 그 장르의 절대적인 걸작이야.)
+
+</br>
+
+if do social life, if exist about one person for boss at work
+
+* In real life, there's always a boss like that at work.
+* If you work in society, you'll definitely meet a boss like her.
+
+</br>
+</br>
+
+what did you think of the way she treated andy?
+그녀가 엔디를 대하는 방식에 대해 어떻게 생각해?
+
+* treated Andy = 엔디를 대하다.
