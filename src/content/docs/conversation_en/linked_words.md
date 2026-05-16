@@ -1,6 +1,6 @@
 ---
-title: 연결어
-description: 연결어에 대해서 알아보자
+title: 연결어 및 문장에 대해서
+description: 연결어 및 문장에 대해서 알아보자
 ---
 
 
@@ -110,3 +110,62 @@ description: 연결어에 대해서 알아보자
 | **반전** | `Turns out` | 알고 보니 ~였어요 |
 | **강조** | `In fact` | 사실은, 실제로 |
 | **결론** | `Eventually` | 결국에는, 마침내 |
+
+</br>
+</br>
+
+* right before = 직전에.
+
+* It wouldn't turn on = 켜지지 않았다.
+
+* was completely stuck = 완전히 멈춰버렸다.
+
+* Step in = 나서다/개입하다.
+
+* find a middle ground = 타협점을 찾다.
+
+* made the final call = 최종 결정을 내리다.
+
+* use the most = 자주 사용하는.
+
+* I do a lot of = 저는 많은 일을 하기 때문에.
+
+* my personal = 개인적인.
+
+* had to rush = 서둘러서.
+
+* would take a week = 1주일 걸릴것이다.
+
+* and barely made the deadline = 간신히 마감일을 맞췄다.
+
+* It was a nightmare = 끔찍한 경험이었다.
+
+* Could you tell me = 저에게 알려주시겠어요?
+
+* Oh, and one more thing = 오 그리고 한가지 더 있어요.
+
+* do you have any discounts = 할인되는거 있나요?
+
+* mobile carrier memberships = 통신사 멤버쉽
+
+* I don't think I can make it = 제가 갈 수 있을지 잘 모르겠어요.
+
+* I just got an urgent call from my team = 방금 팀에서 급한 전화를 받았어.
+
+* I just got an = 받았어
+
+* I have to join = 참석해야만해.
+
+* on such short notice = 갑자기
+
+* to make up for it =  그것을 만회하기 위해서.
+
+* earlier this year =  올해 초에
+
+* But right when = 바로 그때
+
+* apologize profusely = 진심으로 사과하다.
+
+* They whent ahead without me = 나 없이 먼저 가버렸다.
+
+* convenience versus experience = 편의성 vs 경험
