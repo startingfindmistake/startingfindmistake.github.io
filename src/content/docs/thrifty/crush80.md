@@ -33,7 +33,7 @@ description: Crush 80 키보드 단축키 메뉴얼에 대해 알아보자
 <br />
 
 ## 사이드 LED
-
+![Crush 80 아이콘 이미지](../../../assets/thrifty_posts/crush80/crush80_side.png)
 ---
 **사이드 조명 효과 바꾸기:** `Fn` + `;`  
 **사이드 조명 색상 바꾸기:** `Fn` + `"`  
@@ -43,7 +43,7 @@ description: Crush 80 키보드 단축키 메뉴얼에 대해 알아보자
 <br />
 
 ## 키보드 백라이트
-
+![Crush 80 아이콘 이미지](../../../assets/thrifty_posts/crush80/crush80_all.png)
 ---
 **백라이트 효과 변경:** `Fn` + `\`  
 **백라이트 색상 전환:** `Fn` + `Enter`  
