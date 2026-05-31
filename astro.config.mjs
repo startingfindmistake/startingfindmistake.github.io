@@ -80,8 +80,13 @@ export default defineConfig({
 				},
 				{
 					label: 'Database',
-					autogenerate: { directory: 'database_inform'},
+					autogenerate: { directory: 'database_inform' },
 				},
+				{
+					label: '정보처리기사',
+					autogenerate: { directory: 'information_processing_engineer' },
+				},
+
 
 
 
