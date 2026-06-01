@@ -6,7 +6,7 @@ description: he content of the file is newer 에러 원인 과 해결 방법
 
 개발을 하거나 마크다운(Markdown)으로 블로그 글을 작성하다 보면, VS Code나 에디터에서 다음과 같은 당황스러운 에러 메시지를 마주할 때가 있습니다.
 
-![Crush 80 아이콘 이미지](../../../assets/thrifty_posts/activation_after_changin_devices_ko_folds/activation_after_changing_devices.png)
+![content of the file is newer error image](../../../assets/thrifty_posts/activation_after_changin_devices_ko_folds/activation_after_changing_devices.png)
 
 > **"Failed to save 'filename.md': The content of the file is newer. Please compare your version with the file contents or overwrite the content of the file with your changes."**
 
