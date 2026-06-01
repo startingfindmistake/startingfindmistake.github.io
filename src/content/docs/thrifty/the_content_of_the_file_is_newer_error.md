@@ -3,7 +3,6 @@ title: The content of the file is newer 에러 원인 과 해결 방법
 description: he content of the file is newer 에러 원인 과 해결 방법
 ---
 
-# VS Code "The content of the file is newer" 에러 원인과 완벽 해결 가이드
 
 개발을 하거나 마크다운(Markdown)으로 블로그 글을 작성하다 보면, VS Code나 에디터에서 다음과 같은 당황스러운 에러 메시지를 마주할 때가 있습니다.
 
