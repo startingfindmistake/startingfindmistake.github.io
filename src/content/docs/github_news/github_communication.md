@@ -63,7 +63,7 @@ Untracked files:
 1. 프로젝트 최상위 경로에 `.gitignore`파일을 만듭니다.
 2. 무시할 파일명을 적고 저장합니다.
 
-```paintext
+```text
 # .gitignore파일 내용
 <제외하고 싶은 첫번째 파일 이름>
 <제외하고 싶은 두번째 파일이름>

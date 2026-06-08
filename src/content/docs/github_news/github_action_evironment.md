@@ -30,7 +30,7 @@ GitHub Actions 공식 문서의 [Events that trigger workflows](https://docs.git
 
 * `.github/workflows/test.yml` 파일의 최상단 `on`블록을 다음과 같이 구성할수 있습니다.
 
-```YAML
+```yaml
 name: Backend Integration Tests
 
 on:

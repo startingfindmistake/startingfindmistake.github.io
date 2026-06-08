@@ -91,7 +91,7 @@ Testcontainers는 Docker에 의존하므로, 컴퓨터에 Docker Desktop이나 C
 #### 2step: 의존성(Dependency)추가
 프로젝트 `build.gradle` (또는 pom.xml)에 라이브러리를 추가합니다.
 
-```gradle
+```groovy
 // Junit5를 위한 Testcontainers 코어
 testImplementation 'org.testcontainers:junit-jupiter:1.19.3'
 // 사용할 특정 모듈 (예: PostgreSQL)
