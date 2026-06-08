@@ -1,6 +1,7 @@
 ---
 title: 블로그의 내용을 둘러보며
 description: 블로그 내용 소개말
+draft: true
 ---
 
 ## 안녕하세요 starting find mistake 블로그에 오신것을 환영합니다.

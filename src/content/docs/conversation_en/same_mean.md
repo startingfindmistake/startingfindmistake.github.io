@@ -1,6 +1,7 @@
 ---
 title: 문장 분석
 description: 문장 의미의 말들을 알아보자
+draft: true
 ---
 
 * will that be all for you today?
