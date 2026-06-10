@@ -43,7 +43,7 @@ export default defineConfig({
 					label: '메뉴',
 					items: [
 						// Each item here is one entry in the navigation menu.
-						// { label: '블로그 소개글', slug: 'hello' }, // 임시저장 처리로 인해 주석 처리
+						{ label: '블로그 소개글', slug: 'hello' },
 					],
 				},
 				{
