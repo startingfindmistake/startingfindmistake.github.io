@@ -1,6 +1,7 @@
 ---
 title: <내부구조> GitHub 에이전트 워크플로의 보안 아키텍처
 description: Github 에이전트 워크플로의 보안 아키텍처 영문 단어 및 문장 알아보자
+draft: true
 ---
 
 
