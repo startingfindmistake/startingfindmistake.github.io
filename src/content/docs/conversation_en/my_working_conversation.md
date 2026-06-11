@@ -1,6 +1,7 @@
 ---
 title: 업무 관련 이야기
 description: 업무 관련 이야기를 해보자
+draft: true
 ---
 
 Since you mentioned working with database,
@@ -18,19 +19,20 @@ how did you handle it?
 그리고 어떻게 해결하셨나요?
 
 Building Real-Time Data Pipelines and Serverless Architectures
-- 실시간 데이터 파이프라인 및 서버리스 아키텍처 구축
+* 실시간 데이터 파이프라인 및 서버리스 아키텍처 구축
 
 successfully collected and visualized real-time IoT sensor data, such as RPM, noise, and vibration, originating from factory equipment.
 
 * originating = 발생하다(기원하다)
 
-- 공장 설비에서 발생하는 RPM, 소음, 진동 등의 IoT 센서 데이터를 실시간으로 수집하고 시각화하는 데 성공했다
+* 공장 설비에서 발생하는 RPM, 소음, 진동 등의 IoT 센서 데이터를 실시간으로 수집하고 시각화하는 데 성공했다
 
 I used Amazon OpenSearch to efficiently process and index this vast amount of sensor logs.
+
 * vast = 대단한
 * vast amount 엄청난 양
 
-- 나는 이러한 방대한 양의 센서 로그를 효율적으로 처리하고 색인화하기 위해 Amazon OpenSearch를 사용 했습니다.
+* 나는 이러한 방대한 양의 센서 로그를 효율적으로 처리하고 색인화하기 위해 Amazon OpenSearch를 사용 했습니다.
 
 Instead of overloading standard infrastructure, I managed anomaly alerts by designing an event-driven, serverless pipeline using OpenSearch Triggers, AWS SNS, AWS Lambda, and MariaDB.
 
@@ -45,16 +47,12 @@ Ensuring Data Synchronization and Search Optimization
 * synchronization = 동기화
 * Optimization = 최적화
 
-
 * 데이터 동기화 및 검색 최적화 보장
-
 
 Systematic Data Cleaning and Quality Control
 
 * 체계적인 데이터 정제 및 품질 관리
 
-
 During the LG Aimers project, he was responsible for processing large manufacturing sensor datasets to detect product abnormalities.
 
 * LG 에이머스 프로젝트 기간 동안 그는 대규모 제조 센서 데이터 세트를 처리하여 제품 이상을 감지하는 업무를 담당했습니다.
-

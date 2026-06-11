@@ -1,6 +1,7 @@
 ---
 title: 오픽 관련 이야기
 description: 오픽 관련
+draft: true
 ---
 
 hobby = 취미
