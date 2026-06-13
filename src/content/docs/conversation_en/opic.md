@@ -166,4 +166,89 @@ Step3. 'Why -  왜 그렇게 느끼는지 이유'를 설명해 주면 된다.
 * In the past, I often got broke after online shopping.  
 과거에는 온라인 쇼핑을 하고 나서 돈이 없는 경우가 많았어요.
 
-* I keep a separate travel fund so I can plan l
+## topic :technology
+
+---
+
+### invent =  발명하다
+
+* **묘사**: Whoever invented AirPods, I really appreciate them.  
+누군지 몰라도, 에어팟을 발명한 사람에게 정말 고마워요.
+
+</br>
+
+* **습관**: I usually enjoy looking up videos about great inventions on Youtube.  
+유튜브에서 대단한 발명품들을 소개하는 영상을 찾아 보는 걸 좋아해요.
+
+</br>
+
+* **과거경험**: Engineers invented a lot of new machines to make life easier.  
+엔지니어들이 삶을 더 편리하게 만들어주는 새로운 기계들을 많이 발명했어요.
+
+</br>
+
+* **비교**: But these days, we're surrounded by so many amazing inventions.  
+그런데 요즘은 놀라운 발명품들이 우리 주변에 정말 많아요.
+
+</br>
+</br>
+
+### rehearse = 리허설을 하다
+
+* **묘사**: I've realized that doing a camera rehearsal is really important.  
+카메라 리허설을 하는 게 정말 중요하다는 걸 깨달았어요.
+
+</br>
+
+* **습관**: As a YouTuber, I always rehearse before shooting.  
+저는 유튜버라서 촬영하기 전에 꼭 리허설을 해요.
+
+</br>
+
+* **과거 경험**: I once skipped a dress rehearsal before a live company event, and I totally regretted it.  
+예전에 회사 라이브 행사 전에 드레스 리허설을 안 하고 넘긴 적이 있었는데, 진짜 후회했어요.
+
+</br>
+
+* **비교**: But now I try to rehearse every single time before an important event.
+그래서 지금은 중요한 일이 있으면 꼭 빠짐없이 리허설을 하려고 해요.
+
+</br>
+</br>
+
+### impressive = 인상적인
+
+---
+
+* **묘사**: I think electronics these days are pretty impressive  
+요즘 전자제품들은 정말 인상적이라고 생각해요.
+
+</br>
+
+* **습관**: I often buy the newest tech products that really impress me.  
+저는 인상적이라고 느껴지는 최신 기술 제품들을 자주 사요.
+
+</br>
+
+* **과거 경험**: When I was in middle school, I thought MP# players were extremely impressive.  
+중학생 때 MP3 플레이어는 정말 인상적인 제품이라고 생각했어요.
+
+</br>
+
+* **비교**: But now, some gadgets, like MP3 players, aren't impressive anymore.  
+그런데 이제는 MP3 같은 기기들은 더 이상 그렇게 인상적이지 않아요.
+
+* gadget = 간단한 기계 장치
+
+</br>
+</br>
+
+### usable = 사용 가능한, 쓸 수 있는
+
+---
+
+* **묘사**: My laptop is pretty cheap, but it's still very usable.  
+제 노트북은 꽤 저렴하지만 그래도 아직 쓸 만해요.
+
+* **습관**: I check my headphones almost every morning to make sure they're usable throughout the day.  
+저는 헤드폰이 하루 종일 쓸 수 있을만큼 충전이 되어 있는지 아침마다 확인해요.
