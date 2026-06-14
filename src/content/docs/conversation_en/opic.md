@@ -250,5 +250,21 @@ Step3. 'Why -  왜 그렇게 느끼는지 이유'를 설명해 주면 된다.
 * **묘사**: My laptop is pretty cheap, but it's still very usable.  
 제 노트북은 꽤 저렴하지만 그래도 아직 쓸 만해요.
 
+</br>
+
 * **습관**: I check my headphones almost every morning to make sure they're usable throughout the day.  
 저는 헤드폰이 하루 종일 쓸 수 있을만큼 충전이 되어 있는지 아침마다 확인해요.
+
+</br>
+
+* **과거 경험**: I thought it would be usable, but it turned out to be completely broken.  
+그 물건을 쓸 수 있을 줄 알았는데, 알고 보니 완전히 고장이 나 있더라고요.
+
+* turned out = 알고보니 ~이더라.
+
+</br>
+
+* **비교**: So now, I always charge my wireless mouse to make sure it's usable when I need it.  
+그래서 지금은 필요할 때 바로 쓸 수 있도록 무선 마우스를 항상 충전해둬요.
+
+* to make sure = 확실하기 위해서
