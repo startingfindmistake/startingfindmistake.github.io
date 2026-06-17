@@ -268,3 +268,25 @@ Step3. 'Why -  왜 그렇게 느끼는지 이유'를 설명해 주면 된다.
 그래서 지금은 필요할 때 바로 쓸 수 있도록 무선 마우스를 항상 충전해둬요.
 
 * to make sure = 확실하기 위해서
+
+## 여가타임
+
+### look forward to = 기대하다, 즐거운 마음으로 기다리다
+
+* **묘사**: I look forward to hanging out with my friends during my free time.  
+여가 시간에 친구들이랑 노는 게 기다려 져요.
+
+</br>
+
+* **습관**: I tend to look forward to the weekend when I'm at work.  
+회사에선 늘 주말을 기다리는 편이에요.
+
+</br>
+
+* **과거경험**: I was once so sick and looked forward to a speedy recovery.  
+예전에 한 번 아팠던 적이 있는데 빨리 낫기만을 기다렸어요.
+
+</br>
+
+* **비교**: But these days, I tend to look forward to major holidays like Christmas.  
+그런데 요즘은 크리스마스 같은 큰 명절을 기대하게 돼요.
