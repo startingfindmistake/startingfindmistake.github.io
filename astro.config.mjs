@@ -10,6 +10,9 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'Starting Find Mistake',
+			components: {
+				Footer: './src/components/Giscus.astro',
+			},
 
 			head: [
 				{
