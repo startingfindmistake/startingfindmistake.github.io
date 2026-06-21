@@ -1,7 +1,6 @@
 ---
 title: 블로그 댓글 기능 직접 추가해보기
 description: 블로그에 댓글 기능 직접 추가하는 방법
-draft: true
 ---
 
 
