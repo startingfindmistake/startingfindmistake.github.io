@@ -61,17 +61,17 @@ export default defineConfig({
 					label: 'GitHub 뉴스 정리',
 					autogenerate: { directory: 'github_news' },
 				},
+
+				/* 작업중
 				{
 					label: 'conversation with english',
 					autogenerate: { directory: 'conversation_en' },
 				},
+
+				*/
 				{
 					label: 'SpringBoot',
 					autogenerate: { directory: 'springboot' },
-				},
-				{
-					label: 'baekjoon_java',
-					autogenerate: { directory: 'baekjoon_java' },
 				},
 				{
 					label: 'machine learning',
@@ -85,10 +85,11 @@ export default defineConfig({
 					label: 'Database',
 					autogenerate: { directory: 'database_inform' },
 				},
-				{
+
+				/*{
 					label: '정보처리기사',
 					autogenerate: { directory: 'information_processing_engineer' },
-				},
+				},*/
 
 
 
@@ -100,11 +101,12 @@ export default defineConfig({
 
 
 
-
+				/*
 				{
 					label: 'Reference',
 					autogenerate: { directory: 'reference' },
 				},
+				*/
 			],
 		}),
 	],
