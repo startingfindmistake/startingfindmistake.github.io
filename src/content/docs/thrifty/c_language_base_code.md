@@ -1,6 +1,6 @@
 ---
-title: 블로그에 댓글 기능 추가
-description: 블로그에 댓글 기능 추가하는 방법
+title: C언어 기초 정처기 코드
+description: c language base code 정처기 준비
 ---
 
 
