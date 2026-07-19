@@ -148,7 +148,7 @@ t3 = !c;
 </br>
 
 Stpe5: 최종 계산 및 출력
-```C
+```c
 printf("%d", t1 + t2 + t3);
 ```
 
@@ -163,7 +163,7 @@ printf("%d", t1 + t2 + t3);
 
 
 
-```C
+```c
 # include <stdio.h>
 struct st {
     int a;
