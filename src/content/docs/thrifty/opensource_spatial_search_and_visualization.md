@@ -1,3 +1,9 @@
+---
+title: [간단 실습] PostGIS 기반 반경 검색 API 및 GeoJSON 시각화
+description: PostGIS 기반 반경 검색 API 및 GeoJSON 시각화 실습
+---
+
+
 ## 🗺️ [간단 실습] PostGIS 기반 반경 검색 API 및 GeoJSON 시각화
 
 목표: PostGIS 공간 DB를 구축하고, 특정 좌표 반경 내의 데이터를 조회하여 웹 지도 시각화 툴(geojson.io)에 띄우기
